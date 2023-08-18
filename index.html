@@ -8,22 +8,53 @@
 </head>
 
 <body>
-    <h1>Inspirus</h1>
+    <h1>Inspirus 7</h1>
+    <h6>Coming Soon</h6>
 </body>
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   
+    body{
+        background: #3120F3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        transition: background-color .8s;
+    }
     h1 {
-font-family: 'Minecraft';
-font-style: normal;
-font-weight: 500;
-font-size: 52px;
-color: #FFFFFF;
-text-shadow: 1px 6px 10px rgba(253, 54, 126, 0.29), -6px -5px 12px #0E1555;
+        font-size: min(16vw,10em);
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 900;
+        text-align: center;
+        color: #FFFFFF;
+      
     }
 
-    body {
-        background: #0b0210;
-        background-image: url('./assets/grain_dark.png');
+    h6 {
+        margin-top: .5em;
+        font-size: min(6vw,3em);
+  
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        text-align: center;
+        color: #FFFFFF;
     }
 </style>
+
+<script>
+    let i=0
+    let Colors=["#3120F3","#F32020","#000000"]
+    document.body.onclick=()=>{
+        i++
+        document.body.style.backgroundColor=Colors[i%3]
+    }
+</script>
 
 </html>
