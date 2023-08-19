@@ -1,0 +1,26 @@
+{
+  "name": "inspirus-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonBoscoStudents/Inspirus-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonBoscoStudents/Inspirus-Website/issues"
+  },
+  "homepage": "https://github.com/DonBoscoStudents/Inspirus-Website#readme",
+  "dependencies": {
+    "three": "^0.155.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}

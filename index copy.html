@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script type="module" src="./script.js"></script>
+</head>
+
+<body>
+    <div id="texOverlay"></div>
+    <div class="MainText">
+        <h1>Inspirus</h1>
+    </div>
+    <div id="Graphic"></div>
+</body>
+<style>
+    #texOverlay {
+        z-index: 10;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('./assets/grain_dark.png');
+    }
+
+    #Graphic {
+        mix-blend-mode: screen;
+        bottom: 0;
+        position: absolute;
+        overflow-x: hidden;
+    }
+
+    * {
+        margin: 0%;
+        padding: 0;
+    }
+
+    .MainText {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-family: 'Minecraft';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 52px;
+        color: #FFFFFF;
+        text-shadow: 1px 6px 10px rgba(253, 54, 126, 0.29), -6px -5px 12px #0E1555;
+        width: 100%;
+
+
+
+        text-align: center;
+    }
+
+    body {
+        background: #0b0210;
+    }
+</style>
+
+</html>
