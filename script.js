@@ -36,7 +36,7 @@ scene.add(Directional);
 
 const gltfLoader = new GLTFLoader();
 let moon;
-gltfLoader.load("./assets/3D models/moon.gltf", (gltfScene) => {
+gltfLoader.load("assets/3D models/moon.gltf", (gltfScene) => {
   moon = gltfScene;
   gltfScene.scene.position.set(3.8, -3.6, -3);
   gltfScene.scene.scale.set(3.6, 3.6, 3.6);
