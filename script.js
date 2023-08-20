@@ -71,8 +71,8 @@ composer.addPass( renderPass );
 
 
 
-// const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
-// composer.addPass(Bloom)
+const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
+composer.addPass(Bloom)
 
 // const filmPass =new FilmPass(10,.2, 1000,false)
 // composer.addPass( filmPass );
@@ -89,18 +89,23 @@ let Ambient = new THREE.AmbientLight('#111',.1)
 
 scene.add(Ambient)
 
-let i=0
-let Colors=["#3120F3","#F32020","#000000"]
-document.body.onclick=()=>{
-    i++
-    Ambient.color.set(Colors[i%3])
-    document.body.style.backgroundColor=Colors[i%3]
-}
+
+
+let sun= new THREE.Mesh(
+  new THREE.SphereGeometry(6,32,32),
+  new THREE.MeshPhysicalMaterial({emissive:0xffebc9 ,emissiveIntensity:.8})
+)
+
+sun.translateZ(-80)
+let dis=6
+sun.translateY(-1*dis)
+sun.translateX(dis)
+scene.add(sun)
 
 
 function animate() {
 
-  moon.rotateOnAxis(new THREE.Vector3(.5,-1,0),0.004)
+  moon.rotateOnAxis(new THREE.Vector3(.5,-1,0),0.001)
   requestAnimationFrame(animate);
   composer.render();
 }
