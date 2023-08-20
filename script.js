@@ -27,22 +27,34 @@ document.getElementById("Graphic").appendChild(renderer.domElement);
 const AmbientLight = new THREE.AmbientLight("#bbd1fa", .1);
 scene.add(AmbientLight);
 
-const Directional = new THREE.PointLight(0xffffff, 10);
+const Directional = new THREE.DirectionalLight(0xffffff, 10);
 
-Directional.position.set(2, 1, -10);
+Directional.position.set(3, 3, -100);
+
 scene.add(Directional);
 
+const moonColorTexture = new THREE.TextureLoader().load('assets/3D models/lroc_color_poles_4k.jpg')
+const moonDisplacementTexture = new THREE.TextureLoader().load('assets/3D models/ldem_16_uint.JPG')
+
+const moonRes=11
+const moon = new THREE.Mesh(
+  
+  new THREE.SphereGeometry(1,2**moonRes,2**moonRes),
+  // new THREE.BoxGeometry(1.4,1.4,1.4),
+  new THREE.MeshPhysicalMaterial({
+    map:moonColorTexture,
+
+    displacementMap:moonDisplacementTexture,
+    displacementScale:.05,
+
+  })
+)
+moon.position.set(3.8, -3.6, -3);
+moon.scale.set(3.6, 3.6, 3.6);
+scene.add(moon)
 
 
-const gltfLoader = new GLTFLoader();
-let moon;
-gltfLoader.load("assets/3D models/moon.gltf", (gltfScene) => {
-  moon = gltfScene;
-  gltfScene.scene.position.set(3.8, -3.6, -3);
-  gltfScene.scene.scale.set(3.6, 3.6, 3.6);
-  Directional.target = gltfScene.scene;
-  scene.add(gltfScene.scene);
-});
+
 
 window.addEventListener('resize',()=>{
     camera.aspect = window.innerWidth / window.innerHeight
@@ -63,8 +75,9 @@ composer.addPass( renderPass );
 const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
 composer.addPass(Bloom)
 
-const filmPass =new FilmPass(10,.2, 1000,false)
-composer.addPass( filmPass );
+// const filmPass =new FilmPass(10,.2, 1000,false)
+// composer.addPass( filmPass );
+
 
 const outputPass = new OutputPass();
 composer.addPass( outputPass );
@@ -75,10 +88,8 @@ renderer.toneMappingExposure=1
 
 
 function animate() {
-  if (moon) {
-    moon.scene.rotation.y += 0.002;
-  }
 
+  moon.rotateOnAxis(new THREE.Vector3(.5,-1,0),.005)
   requestAnimationFrame(animate);
   composer.render();
 }

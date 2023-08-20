@@ -1,84 +1,89 @@
-import * as THREE from 'three'
+import * as THREE from "three";
 
-import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
-import { TransformControls } from 'three/addons/controls/TransformControls.js';
-
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { FilmPass } from'three/examples/jsm/postprocessing/FilmPass.js'
+import {UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass'
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(32,window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  32,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
 camera.position.z = 5;
 
-const cameraStill = new THREE.PerspectiveCamera(32,window.innerWidth / window.innerHeight, 0.1, 1000);
-cameraStill.position.z = 5;
-const CamHelper = new THREE.CameraHelper(cameraStill)
-scene.add(CamHelper)
-const renderer =new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-const renderer2 =new THREE.WebGLRenderer();
-renderer2.setSize(window.innerWidth/4, window.innerHeight/4);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-document.getElementById('Graphic').appendChild(renderer.domElement)
-document.getElementById('MainCamera').appendChild(renderer2.domElement)
+document.getElementById("Graphic").appendChild(renderer.domElement);
 
-const AmbientLight=new THREE.AmbientLight('#bbd1fa',1)
-scene.add(AmbientLight)
+const AmbientLight = new THREE.AmbientLight("#bbd1fa", .1);
+scene.add(AmbientLight);
 
+const Directional = new THREE.PointLight(0xffffff, 10);
 
-const Directional = new THREE.DirectionalLight(0xffffff,20)
-
-Directional.position.set(-8,-3.6,-2)
-
-const DHelper= new THREE.DirectionalLightHelper(Directional)
-scene.add(Directional,DHelper)
-const TrControls = new TransformControls(camera,renderer.domElement)
-TrControls.attach(Directional)
-scene.add(TrControls)
-
-window.addEventListener('keydown',(event)=>{
-    switch (event.code) {
-        case 'KeyG':
-            TrControls.setMode('translate')
-            break
-        case 'KeyR':
-            TrControls.setMode('rotate')
-            break
-        case 'KeyS':
-            TrControls.setMode('scale')
-            break
-    }
-})
-
+Directional.position.set(2, 1, -10);
+scene.add(Directional);
 
 
 
 const gltfLoader = new GLTFLoader();
-let car;
-gltfLoader.load('./assets/3D models/moon.gltf',(gltfScene)=>{
-    car=gltfScene;
-    gltfScene.scene.position.set(3.8,-3.6,-3)
-    gltfScene.scene.scale.set(3.6,3.6,3.6)
-    Directional.target=gltfScene.scene
-    scene.add(gltfScene.scene)
+let moon;
+gltfLoader.load("assets/3D models/moon.gltf", (gltfScene) => {
+  moon = gltfScene;
+  gltfScene.scene.position.set(3.8, -3.6, -3);
+  gltfScene.scene.scale.set(3.6, 3.6, 3.6);
+  Directional.target = gltfScene.scene;
+  scene.add(gltfScene.scene);
+});
+
+window.addEventListener('resize',()=>{
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    render()
 })
 
-    camera.position.set(2.6,42.6,5.7)
-    camera.rotation.set(-1.4,0.06,0.4)
+
+const composer = new EffectComposer( renderer )
+const renderPass = new RenderPass( scene, camera );
+composer.addPass( renderPass );
+
+
+
+
+
+const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
+composer.addPass(Bloom)
+
+const filmPass =new FilmPass(10,.2, 1000,false)
+composer.addPass( filmPass );
+
+const outputPass = new OutputPass();
+composer.addPass( outputPass );
+
+renderer.toneMapping=THREE.CineonToneMapping;
+renderer.toneMappingExposure=1
+
+
 
 function animate() {
-    if(car){
-        car.scene.rotation.y+=.002
-    }
-    // controls.update();
+  if (moon) {
+    moon.scene.rotation.y += 0.002;
+  }
 
-    // console.log(camera.position,camera.rotation)
-	requestAnimationFrame( animate );
-	renderer.render( scene, camera );
-	renderer2.render( scene, cameraStill );
+  requestAnimationFrame(animate);
+  composer.render();
 }
-// localStorage.setItem({'LastPos':camera.position})
+
+function render() {
+    renderer.render(scene, camera)
+}
 animate();

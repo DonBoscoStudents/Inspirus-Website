@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;700&family=Noto+Sans:wght@100;300;500&display=swap" rel="stylesheet">
-    <!-- <script type="module" src="./script.js"></script> -->
-    <script type="module" src="./dist/assets/index-ae63d87c.js"></script>
+    <script type="module" src="./script.js"></script>
+    <!-- <script type="module" src="./dist/assets/index-ae63d87c.js"></script> -->
 </head>
 
 <body>
@@ -27,14 +27,18 @@
         width: 100vw;
         height: 100vh;
         background-image: url('./assets/grain_dark.png');
+        pointer-events: none;
         display: none;
     }
 
     #Graphic {
+
+  pointer-events: none;
         mix-blend-mode: screen;
         bottom: 0;
         position: absolute;
         overflow-x: hidden;
+   
     }
 
     * {
@@ -44,17 +48,22 @@
 
     .MainText {
         height: 100vh;
-        width: 100%;
+   
+
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: left;
         justify-content: center;
+        row-gap: 1em;
+        margin-left: 2em;
     }
 
     h1 {
-/* Inspirus 7 */
 
-position: absolute;
-width: 427px;
+
+
+width: min(427px,75vw);
+
 height: 63px;
 left: 61px;
 top: 120px;
@@ -62,7 +71,7 @@ top: 120px;
 font-family: 'IBM Plex Serif';
 font-style: normal;
 font-weight: 500;
-font-size: 4em;
+font-size: min(4em,14vw);
 line-height: 100.25%;
 /* or 75px */
 display: flex;
@@ -75,8 +84,8 @@ color: #FFFFFF;
 p{
 
 
-position: absolute;
-width: 575px;
+
+width: min(575px,80%);
 height: 333px;
 left: 61px;
 top: 206px;
@@ -84,7 +93,7 @@ top: 206px;
 font-family: 'Noto Sans';
 font-style: normal;
 font-weight: 100;
-font-size: 1.3em;
+font-size: min(1.3em,5vw);
 line-height: 100.25%;
 /* or 30px */
 
