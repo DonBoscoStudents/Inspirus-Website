@@ -29,7 +29,7 @@ scene.add(AmbientLight);
 
 const Directional = new THREE.DirectionalLight(0xffffff, 10);
 
-Directional.position.set(3, 3, -100);
+Directional.position.set(2.8, 3, -100);
 
 scene.add(Directional);
 
@@ -39,7 +39,7 @@ const moonDisplacementTexture = new THREE.TextureLoader().load('assets/3D models
 const moonRes=11
 const moon = new THREE.Mesh(
   
-  new THREE.SphereGeometry(1,2**moonRes,2**moonRes),
+  new THREE.SphereGeometry(4,2**moonRes,2**moonRes),
   // new THREE.BoxGeometry(1.4,1.4,1.4),
   new THREE.MeshPhysicalMaterial({
     map:moonColorTexture,
@@ -49,10 +49,9 @@ const moon = new THREE.Mesh(
 
   })
 )
-moon.position.set(3.8, -3.6, -3);
-moon.scale.set(3.6, 3.6, 3.6);
+moon.position.set(3.2, -3.6, -3);
+// moon.scale.set(3.6, 3.6, 3.6);
 scene.add(moon)
-
 
 
 
@@ -72,8 +71,8 @@ composer.addPass( renderPass );
 
 
 
-const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
-composer.addPass(Bloom)
+// const Bloom =new UnrealBloomPass(new THREE.Vector2(0,0),.6,1, 0)
+// composer.addPass(Bloom)
 
 // const filmPass =new FilmPass(10,.2, 1000,false)
 // composer.addPass( filmPass );
@@ -86,10 +85,22 @@ renderer.toneMapping=THREE.CineonToneMapping;
 renderer.toneMappingExposure=1
 
 
+let Ambient = new THREE.AmbientLight('#111',.1)
+
+scene.add(Ambient)
+
+let i=0
+let Colors=["#3120F3","#F32020","#000000"]
+document.body.onclick=()=>{
+    i++
+    Ambient.color.set(Colors[i%3])
+    document.body.style.backgroundColor=Colors[i%3]
+}
+
 
 function animate() {
 
-  moon.rotateOnAxis(new THREE.Vector3(.5,-1,0),.005)
+  moon.rotateOnAxis(new THREE.Vector3(.5,-1,0),0.004)
   requestAnimationFrame(animate);
   composer.render();
 }
@@ -98,3 +109,4 @@ function render() {
     renderer.render(scene, camera)
 }
 animate();
+
