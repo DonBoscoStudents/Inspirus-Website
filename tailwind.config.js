@@ -5,7 +5,7 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     fontFamily:{
-      'minecraft':'VT323'
+      'minecraft':'Minecraft'
     },
     extend: {},
   },
