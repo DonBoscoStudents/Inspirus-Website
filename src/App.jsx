@@ -3,18 +3,21 @@ import './App.css';
 
 
 function App() {
-  const [count, setCount] = useState(0); 
+  const [count, setCount] = useState(1); 
+  const growthFactor = 2; 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if(count < 100) {
-        setCount(prevCount => prevCount + 1);
+      const nextCount = count * growthFactor;  // Predict the next count value
+      if (nextCount <= 100) {
+        setCount(nextCount);  // Only update count if it would not exceed 100
       } else {
+        setCount(100);
         clearTimeout(timer);
-        window.location.href = '/inspirus-page';  // open new page
+        window.location.href = '/inspirus-page';  // Open new page
       }
-    }, 100);
-  
-    return () => clearTimeout(timer);  
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, [count]);
   
 
