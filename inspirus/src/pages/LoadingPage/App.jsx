@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import '../../output.css'
 
 
-function App() {
+function LoadingPage() {
   const [count, setCount] = useState(0); 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -10,9 +11,9 @@ function App() {
         setCount(prevCount => prevCount + 1);
       } else {
         clearTimeout(timer);
-        window.location.href = '/Home';  // open new page
+        // window.location.href = '/Home';  // open new page
       }
-    }, 20);
+    }, 30);
   
     return () => clearTimeout(timer);  
   }, [count]);
@@ -32,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoadingPage;
