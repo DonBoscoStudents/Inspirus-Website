@@ -1,1 +1,1 @@
-# Inspirus-Website Mare
+# Loading screen for INSPIRUS
