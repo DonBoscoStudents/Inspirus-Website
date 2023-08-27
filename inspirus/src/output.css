@@ -534,6 +534,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -543,12 +555,28 @@ video {
   display: flex;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .w-\[60vw\] {
@@ -567,16 +595,49 @@ video {
   justify-content: center;
 }
 
-.gap-16 {
-  gap: 4rem;
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-2xl {
   border-radius: 1rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-sky-100\/10 {
+  border-color: rgb(224 242 254 / 0.1);
+}
+
+.bg-\[\#3120F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 32 243 / var(--tw-bg-opacity));
+}
+
+.bg-slate-950\/70 {
+  background-color: rgb(2 6 23 / 0.7);
 }
 
 .bg-white {
@@ -601,15 +662,75 @@ video {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-white\/20 {
+  color: rgb(255 255 255 / 0.2);
+}
+
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[bottom\] {
+  transition-property: bottom;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 @font-face {
   font-family: "Minecraft";
 
   src: url("/Fonts/Minecraft.ttf");
+}
+
+.hover\:bottom-6:hover {
+  bottom: 1.5rem;
+}
+
+.hover\:bottom-5:hover {
+  bottom: 1.25rem;
 }
 
 @media (min-width: 640px) {

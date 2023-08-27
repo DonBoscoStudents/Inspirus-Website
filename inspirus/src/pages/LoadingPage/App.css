@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
 }
-body{
+/* body{
   background-color: #3120F3;
-}
+} */
 
 .bar{
   transition:width 4s cubic-bezier(.97,.13,.56,.96);
