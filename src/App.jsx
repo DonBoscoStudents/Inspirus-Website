@@ -15,7 +15,7 @@ function App() {
         clearTimeout(timer);
         window.location.href = '/inspirus-page';  // Open new page
       }
-    }, 500);
+    }, 200);
 
     return () => clearTimeout(timer);
   }, [count]);
