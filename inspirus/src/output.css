@@ -534,32 +534,29 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .flex {
   display: flex;
 }
 
-.h-32 {
-  height: 8rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-40 {
-  height: 10rem;
+.h-screen {
+  height: 100vh;
 }
 
-.w-32 {
-  width: 8rem;
+.w-\[60vw\] {
+  width: 60vw;
 }
 
-.w-96 {
-  width: 24rem;
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -570,34 +567,38 @@ video {
   justify-content: center;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
+.gap-16 {
+  gap: 4rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
-.bg-sky-950 {
+.border-2 {
+  border-width: 2px;
+}
+
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(8 47 73 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-\[3px\] {
+  padding: 3px;
 }
 
 .text-center {
   text-align: center;
 }
 
-.text-9xl {
-  font-size: 8rem;
+.font-minecraft {
+  font-family: Minecraft;
+}
+
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.leading-10 {
-  line-height: 2.5rem;
 }
 
 .text-white {
@@ -605,4 +606,15 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@font-face {
+  font-family: "Minecraft";
 
+  src: url("/Fonts/Minecraft.ttf");
+}
+
+@media (min-width: 640px) {
+  .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
