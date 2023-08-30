@@ -26,6 +26,10 @@ export default function Form()
         <p>Image URL</p>
         <input name="entry.876583605" type="text"></input>
         </div>
+        <div className="input_tab">
+        <p>Image Caption</p>
+        <input name="entry.876583605" type="text"></input>
+        </div>
         <input className="button" type="submit"/>
         </div>
         </form>
