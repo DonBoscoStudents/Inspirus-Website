@@ -4,33 +4,35 @@ import '../../output.css'
 
 
 function LoadingPage() {
-  const [count, setCount] = useState(0); 
+  const [count, setCount] = useState(1); 
+
   useEffect(() => {
+    setTimeout(()=>{
+      setCount(100);
+    },10)
     const timer = setTimeout(() => {
-      if(count < 100) {
-        setCount(prevCount => prevCount + 1);
-      } else {
         clearTimeout(timer);
-        // window.location.href = '/Home';  // open new page
-      }
-    }, 30);
-  
-    return () => clearTimeout(timer);  
+        window.location.href = '/Home';  // Open new page
+      }, 4000);
+
+    return () => clearTimeout(timer);
   }, [count]);
   
-
   return (
     <>
-    <div className='mt-48'>
-      <h1 className="sm:text-8xl  text-7xl text-center font-minecraft text-white my-28">INSPIRUS</h1>
-      <div className='flex justify-center'>
-        <div className="w-[80%] p-[2px] h-[34px]  rounded border flex items-center justify-start">
-          <div className="h-[28px] rounded bg-white" style={{ width: `${count}%` }}></div>
+    
+    <div className='bg-[#3120F3] flex items-center flex-col h-screen justify-center gap-8'>
+      <h1 className="sm:text-9xl  text-5xl text-center font-minecraft text-white my-4">INSPIRUS</h1>
+      <div>
+        <div className="w-[60vw] p-[3px] border-2 rounded-2xl">
+          <div className="bar h-6  w-0 bg-white rounded-2xl" style={{ width: `${count}%` }}></div>
+
         </div>
       </div>
       </div>
     </>
   );
 }
+
 
 export default LoadingPage;
