@@ -2,11 +2,45 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: white;
     margin: 0px;
-    color: white;
+    color: black;
 }
 
 .form_structure{
-    
+    background-color: white;
+    width: auto;
+
+    padding: 20px;
+
+    box-shadow: 2px 2px 10px black;
+}
+
+.input_tab{
+    padding: 10px 0px;
+    width: auto;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    transition: 500ms;
+
+}
+
+input:focus{
+    border-bottom: 1px solid rgb(0, 140, 255);
+    outline: none;
+    transition: 500ms;
+}
+
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
