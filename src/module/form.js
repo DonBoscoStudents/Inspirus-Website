@@ -13,7 +13,7 @@ export default function Form()
         <p>College</p>
         <input name="entry.876583605" type="text" placeholder="Don bosco college of engineering" value="Don bosco college of engineering"></input>
         </div>
-        <input type="submit"/>
+        <input className="button" type="submit"/>
         </div>
         </div>
         </form>

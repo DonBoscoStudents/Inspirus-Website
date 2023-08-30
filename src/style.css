@@ -11,9 +11,9 @@ body{
     background-color: white;
     width: auto;
 
-    padding: 20px;
+    padding: 10px 80px 10px 30px;
 
-    box-shadow: 2px 2px 10px black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .input_tab{
@@ -30,7 +30,7 @@ input{
     border: none;
     border-bottom: 1px solid black;
     transition: 500ms;
-
+    width: 100%;
 }
 
 input:focus{
@@ -43,4 +43,16 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(0, 85, 255);
+    height: 100vh;
+}
+
+.button{
+    background-color: rgb(231, 231, 231);
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: rgb(243, 243, 243);
 }
