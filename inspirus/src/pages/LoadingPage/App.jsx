@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import '../../output.css'
 
+
 function LoadingPage() {
   const [count, setCount] = useState(1); 
 
@@ -25,13 +26,13 @@ function LoadingPage() {
       <div>
         <div className="w-[60vw] p-[3px] border-2 rounded-2xl">
           <div className="bar h-6  w-0 bg-white rounded-2xl" style={{ width: `${count}%` }}></div>
+
         </div>
       </div>
       </div>
     </>
   );
 }
-
 
 
 export default LoadingPage;
