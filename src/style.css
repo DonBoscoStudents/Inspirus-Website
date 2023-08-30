@@ -56,16 +56,17 @@ input:focus{
 }
 
 .button{
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(131, 185, 255);
     border: none;
     border-radius: 5px;
     padding: 10px 30px;
     margin: 20px 0px;
-    color: black;
+    color: white;
 }
 
 .button:hover{
-    background-color: rgb(156, 156, 156);
+    background-color: rgb(0, 110, 255);
+    color: white;
 }
 
 .coord_tab{
@@ -79,6 +80,8 @@ input:focus{
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+
+    border-radius: 5px;
 }
 
 .temp{
@@ -108,8 +111,10 @@ h3{
     text-align: center;
     color: white;
     font-weight: 600;
+    transition: 500ms;
 }
 
 .whatsapp:hover{
     background-color: rgb(0, 201, 0);
+    transition: 500ms;
 }
