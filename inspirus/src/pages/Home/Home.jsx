@@ -1,11 +1,9 @@
 import './style.module.css'
 
 function Home() {
-    return <div >
-
-      <h1 className='text-white'>Home Page</h1>
+    return <div>
+      
     </div>;
   }
   
   export default Home;
-  
