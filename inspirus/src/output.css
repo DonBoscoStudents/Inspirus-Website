@@ -603,10 +603,6 @@ video {
   justify-content: center;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -671,16 +667,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-sky-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
-}
-
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
-}
-
 .p-\[3px\] {
   padding: 3px;
 }
@@ -708,16 +694,16 @@ video {
   line-height: 1.25rem;
 }
 
+.font-black {
+  font-weight: 900;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-thin {
   font-weight: 100;
-}
-
-.font-black {
-  font-weight: 900;
 }
 
 .text-white {
@@ -729,25 +715,11 @@ video {
   color: rgb(255 255 255 / 0.7);
 }
 
-
-
-.transition-\[bottom\] {
-  transition-property: bottom;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
-}
-
-
 @font-face {
   font-family: "Minecraft";
 
   src: url("/Fonts/Minecraft.ttf");
 }
-
 
 .light{
   --base:#8EA7E9;
@@ -769,16 +741,12 @@ video {
   --c4:#E85313;
   --c5:#FB1048;
   --c6:#E813B9;
+}
 
 @font-face {
   font-family: "Rubik";
 
   src: url("/Fonts/Rubik-VariableFont_wght.ttf");
-}
-
-.hover\:bottom-5:hover {
-  bottom: 1.25rem;
-
 }
 
 @media (min-width: 640px) {
@@ -787,3 +755,4 @@ video {
     line-height: 1;
   }
 }
+
