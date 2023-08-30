@@ -538,6 +538,10 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
@@ -553,6 +557,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-16 {
@@ -595,8 +603,20 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-3 {
@@ -615,8 +635,14 @@ video {
   border-radius: 1rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 
 .border {
@@ -643,6 +669,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
 }
 
 .p-\[3px\] {
@@ -693,6 +729,8 @@ video {
   color: rgb(255 255 255 / 0.7);
 }
 
+
+
 .transition-\[bottom\] {
   transition-property: bottom;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -703,11 +741,34 @@ video {
   transition-duration: 200ms;
 }
 
+
 @font-face {
   font-family: "Minecraft";
 
   src: url("/Fonts/Minecraft.ttf");
 }
+
+
+.light{
+  --base:#8EA7E9;
+  --text:#01000C;
+  --c1:#9289FF;
+  --c2:#ADEBFF;
+  --c3:#C7FAB5;
+  --c4:#FFB7AD;
+  --c5:#FFA1DA;
+  --c6:#E2B5F8;
+}
+
+.dark{
+  --base:#01000C;
+  --text:#FFFFFF;
+  --c1:#3120F3;
+  --c2:#0079FF;
+  --c3:#00DFA2;
+  --c4:#E85313;
+  --c5:#FB1048;
+  --c6:#E813B9;
 
 @font-face {
   font-family: "Rubik";
@@ -717,6 +778,7 @@ video {
 
 .hover\:bottom-5:hover {
   bottom: 1.25rem;
+
 }
 
 @media (min-width: 640px) {
