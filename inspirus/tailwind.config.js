@@ -7,7 +7,8 @@ export default {
 ],
   theme: {
     fontFamily:{
-      'minecraft':'Minecraft'
+      'minecraft':'Minecraft',
+      'rubik':'Rubik',
     },
     extend: {},
   },
