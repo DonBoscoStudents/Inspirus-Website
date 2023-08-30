@@ -7,3 +7,8 @@
     font-family: "Minecraft";
     src: url("/Fonts/Minecraft.ttf");
   }
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/Fonts/Rubik-VariableFont_wght.ttf");
+  }

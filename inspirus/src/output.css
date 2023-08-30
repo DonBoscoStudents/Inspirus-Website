@@ -534,7 +534,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-
 .fixed {
   position: fixed;
 }
@@ -550,21 +549,11 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-
-.my-28 {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
-}
-
-.mt-48 {
-  margin-top: 12rem;
-
 }
 
 .flex {
   display: flex;
 }
-
 
 .h-16 {
   height: 4rem;
@@ -596,32 +585,15 @@ video {
 
 .flex-col {
   flex-direction: column;
-
-.h-\[28px\] {
-  height: 28px;
-}
-
-.h-\[34px\] {
-  height: 34px;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-
 }
 
 .items-center {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
-
 
 .justify-evenly {
   justify-content: space-evenly;
@@ -659,41 +631,30 @@ video {
   border-color: rgb(224 242 254 / 0.1);
 }
 
-.bg-\[\#3120F3\] {
+.bg-\[\#F0323E\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(49 32 243 / var(--tw-bg-opacity));
+  background-color: rgb(240 50 62 / var(--tw-bg-opacity));
 }
 
 .bg-slate-950\/70 {
   background-color: rgb(2 6 23 / 0.7);
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.border {
-  border-width: 1px;
-
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-
 }
 
 .p-\[3px\] {
   padding: 3px;
-
 }
 
-.p-\[2px\] {
-  padding: 2px;
+.text-center {
+  text-align: center;
 }
 
-
-.font-minecraft {
-  font-family: Minecraft;
+.font-rubik {
+  font-family: Rubik;
 }
 
 .text-5xl {
@@ -717,19 +678,10 @@ video {
 
 .font-thin {
   font-weight: 100;
-
-.text-center {
-  text-align: center;
 }
 
-.font-minecraft {
-  font-family: Minecraft;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-
+.font-black {
+  font-weight: 900;
 }
 
 .text-white {
@@ -737,21 +689,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-
-.text-white\/20 {
-  color: rgb(255 255 255 / 0.2);
-}
-
 .text-white\/70 {
   color: rgb(255 255 255 / 0.7);
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .transition-\[bottom\] {
@@ -764,24 +703,16 @@ video {
   transition-duration: 200ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-
 @font-face {
   font-family: "Minecraft";
 
   src: url("/Fonts/Minecraft.ttf");
 }
 
+@font-face {
+  font-family: "Rubik";
 
-.hover\:bottom-6:hover {
-  bottom: 1.5rem;
+  src: url("/Fonts/Rubik-VariableFont_wght.ttf");
 }
 
 .hover\:bottom-5:hover {
@@ -791,12 +722,6 @@ video {
 @media (min-width: 640px) {
   .sm\:text-9xl {
     font-size: 8rem;
-
-
-@media (min-width: 640px) {
-  .sm\:text-8xl {
-    font-size: 6rem;
-
     line-height: 1;
   }
 }

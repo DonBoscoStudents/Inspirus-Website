@@ -10,14 +10,9 @@
 .bar{
   transition:width 4s cubic-bezier(.97,.13,.56,.96);
 
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
 }
-body{
-  background-color: #3120F3;
-}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -46,11 +41,5 @@ body{
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
 
-}
