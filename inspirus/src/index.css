@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("/Fonts/Minecraft.ttf");
+  }
+
+
+.light{
+  --base:#8EA7E9;
+  --text:#01000C;
+  --c1:#9289FF;
+  --c2:#ADEBFF;
+  --c3:#C7FAB5;
+  --c4:#FFB7AD;
+  --c5:#FFA1DA;
+  --c6:#E2B5F8;
+}
+
+.dark{
+  --base:#01000C;
+  --text:#FFFFFF;
+  --c1:#3120F3;
+  --c2:#0079FF;
+  --c3:#00DFA2;
+  --c4:#E85313;
+  --c5:#FB1048;
+  --c6:#E813B9;
+}
