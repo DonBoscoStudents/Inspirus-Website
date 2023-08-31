@@ -9,10 +9,10 @@ const Music = new Audio(MinecraftMusic)
 
 function Waveform(){
   return(
-    <div id='waveform'>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div id='waveform' >
+      <div className='bg-textColor'></div>
+      <div className='bg-textColor'></div>
+      <div className='bg-textColor'></div>
     </div>
   )
 }
@@ -33,16 +33,15 @@ function PlaySound() {
   return<div className='fixed bottom-4 right-4 flex flex-col gap-0.5 '> 
 
 
-  <div className="text-white w-64 h-16 border-sky-100/10 border rounded-t-xl bg-slate-950 flex gap-3 overflow-hidden ">
+  <div className="text-textColor w-64 h-16   rounded-t-xl bg-primary-2 flex gap-3 overflow-hidden ">
     <img className="h-full"  src={c419} alt="" />
     <div className='justify-evenly flex flex-col'>
        <h1 className="font-bold text-lg">Now Playing </h1>
 
-    <div className='text-white/70 font-thin text-sm flex items-center gap-2'>c419 <Waveform/></div>
+    <div className='text-textColor/20 font-thin text-sm flex items-center gap-2'>c419 <Waveform/></div>
     </div>
-   
   </div>
-  <div id='player' className='text-white w-64 h-12  border-sky-100/10 border rounded-b-xl bg-slate-950 flex gap-3 overflow-hidden text items-center justify-center'>
+  <div id='player' className='text-textColor w-64 h-12   rounded-b-xl bg-primary-2 flex gap-3 overflow-hidden text items-center justify-center'>
   <button><Prev/></button>
   <button onClick={
     pauseMusic
