@@ -555,6 +555,14 @@ video {
   margin-bottom: -8rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -589,6 +597,10 @@ video {
 
 .w-\[60vw\] {
   width: 60vw;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .flex-col {
@@ -837,6 +849,32 @@ video {
 @media (min-width: 640px) {
   .sm\:text-9xl {
     font-size: 8rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[40\%\] {
+    width: 40%;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }
