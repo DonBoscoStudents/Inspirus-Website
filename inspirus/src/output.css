@@ -551,6 +551,18 @@ video {
   margin-bottom: 1rem;
 }
 
+.-mb-16 {
+  margin-bottom: -4rem;
+}
+
+.-mb-10 {
+  margin-bottom: -2.5rem;
+}
+
+.-mb-32 {
+  margin-bottom: -8rem;
+}
+
 .flex {
   display: flex;
 }
@@ -623,6 +635,14 @@ video {
   gap: 2rem;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -653,14 +673,13 @@ video {
   border-color: rgb(224 242 254 / 0.1);
 }
 
+.border-sky-100\/40 {
+  border-color: rgb(224 242 254 / 0.4);
+}
+
 .bg-\[\#F0323E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 50 62 / var(--tw-bg-opacity));
-}
-
-.bg-rose-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 113 133 / var(--tw-bg-opacity));
 }
 
 .bg-slate-950\/70 {
@@ -672,6 +691,15 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-slate-950\/90 {
+  background-color: rgb(2 6 23 / 0.9);
+}
+
+.bg-slate-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+}
+
 .p-3 {
   padding: 0.75rem;
 }
@@ -680,8 +708,20 @@ video {
   padding: 3px;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.font-ElegantoSans {
+  font-family: ElegantoSans;
 }
 
 .font-IBMPlexSerif {
@@ -697,6 +737,19 @@ video {
   line-height: 1;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-\[12em\] {
+  font-size: 12em;
+}
+
+.text-\[8em\] {
+  font-size: 8em;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -705,16 +758,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-black {
@@ -727,10 +770,6 @@ video {
 
 .font-thin {
   font-weight: 100;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .text-white {
