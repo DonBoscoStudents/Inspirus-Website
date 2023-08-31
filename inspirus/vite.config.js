@@ -1,4 +1,4 @@
-import {resolve} from 'path'
+import { resolve } from 'path';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
@@ -9,7 +9,8 @@ const root = resolve(__dirname,'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  // eslint-disable-next-line no-undef
+  plugins: [react(),require('react-router-dom')],
   build:{
     // outDir,
     // emptyOutDir:true,
