@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import {Back, DarkMode } from '../icons'
-
+import {Link } from 'react-router-dom'
 
 function NavBar() {
+
   window.onload=SetColorMode
   const [isDarkMode,SetDarkMode] = useState(false)
   function SetColorMode(){
@@ -18,8 +19,15 @@ function NavBar() {
     document.body.classList.toggle('dark')
     document.body.classList.toggle('light')
   }
+
     return <div className='flex justify-between p-3'>
+
+      <Link to={-1}>
       <Back Size='20'/>
+
+      </Link>
+
+
       <button onClick={ChangeColorMode}>
       <DarkMode Size='20' Mode={isDarkMode?'Dark':''}  />
       </button>
