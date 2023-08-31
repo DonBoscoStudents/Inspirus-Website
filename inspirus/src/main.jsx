@@ -5,8 +5,8 @@ import LoadingPage from './pages/LoadingPage/App'
 
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Home from './pages/Home/Home'
-import PlaySound from './components/playSound/playSound'
-import { DarkMode } from './components/icons'
+import PlaySound from './components/playSound/app'
+import NavBar from './components/navBar/app'
 
 
 
@@ -27,11 +27,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <button className='text-white absolute'>
-      <DarkMode Mode="Dark"/>
-    </button>
-  <PlaySound/>
-    
+    <NavBar/>
+    <PlaySound/>
     <RouterProvider router={router} />
   </React.StrictMode>
 )

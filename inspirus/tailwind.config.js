@@ -9,6 +9,10 @@ export default {
     fontFamily:{
       'minecraft':'Minecraft',
       'rubik':'Rubik',
+      'NotoSans':'Rubik',
+      'NotoSerif':'Rubik',
+      'IBMPlexSerif':'IBMPlexSerif',
+      'ElegantoSans':'ElegantoSans',
     },
     extend: {},
   },
