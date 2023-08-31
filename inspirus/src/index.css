@@ -39,7 +39,7 @@
 
 .light{
   --base:#8EA7E9;
-  --text:#01000C;
+  --textColor:#01000C;
   --c1:#9289FF;
   --c2:#ADEBFF;
   --c3:#C7FAB5;
@@ -48,9 +48,9 @@
   --c6:#E2B5F8;
 }
 
-.dark,:root{
+.dark{
   --base:#01000C;
-  --text:#FFFFFF;
+  --textColor:#FFFFFF;
   --c1:#3120F3;
   --c2:#0079FF;
   --c3:#00DFA2;

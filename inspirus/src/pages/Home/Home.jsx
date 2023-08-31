@@ -10,7 +10,7 @@ import NavBar from '../../components/navBar/app'
 // }
 
 function Home() {
-    return <div>
+    return <div className='bg-primary text-textColor'>
           <NavBar/>
       <Hero/>
       <MovingText/>
