@@ -8,10 +8,38 @@
     src: url("/Fonts/Minecraft.ttf");
   }
 
+@font-face {
+    font-family: "Rubik";
+    src: url("/Fonts/Rubik-VariableFont_wght.ttf");
+}
+
+
+@font-face {
+    font-family: "ElegantoSans";
+    src: url("/Fonts/ElegantoSans-Thin.ttf");
+  }
+  @font-face {
+    font-family: 'NotoSerif';
+    src: url('/Fonts/NotoSerif-VariableFont_wdth,wght.ttf') format('ttf'),
+  }
+
+
+@font-face {
+    font-family: 'IBMPlexSerif';
+    font-weight: 500;
+    src: url('/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf') format('ttf'),
+  }
+@font-face {
+    font-family: 'NotoSans';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/Fonts/Noto Sans/NotoSans-Thin.ttf') format('ttf'),
+  }
+
 
 .light{
   --base:#8EA7E9;
-  --text:#01000C;
+  --textColor:#01000C;
   --c1:#9289FF;
   --c2:#ADEBFF;
   --c3:#C7FAB5;
@@ -22,7 +50,7 @@
 
 .dark{
   --base:#01000C;
-  --text:#FFFFFF;
+  --textColor:#FFFFFF;
   --c1:#3120F3;
   --c2:#0079FF;
   --c3:#00DFA2;
@@ -31,8 +59,4 @@
   --c6:#E813B9;
 }
 
-@font-face {
-    font-family: "Rubik";
-    src: url("/Fonts/Rubik-VariableFont_wght.ttf");
-  }
 

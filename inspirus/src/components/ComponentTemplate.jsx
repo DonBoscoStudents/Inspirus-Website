@@ -1,6 +1,6 @@
 function Component() {
   return <div>
-    <h1>This Is A Component</h1>
+    <h1>Text</h1>
   </div>;
 }
 

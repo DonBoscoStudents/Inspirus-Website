@@ -12,10 +12,7 @@ function LoadingPage() {
     },10)
     const timer = setTimeout(() => {
         clearTimeout(timer);
-
-        window.location.href = '/';  // Open new page
-
-        // window.location.href = '/Home';  // Open new page
+        window.location.href = '/Home';  // Open new page
       }, 4000);
 
     return () => clearTimeout(timer);
