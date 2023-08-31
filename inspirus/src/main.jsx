@@ -5,7 +5,6 @@ import LoadingPage from './pages/LoadingPage/App'
 
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Home from './pages/Home/Home'
-import PlaySound from './components/playSound/app'
 
 
 
@@ -26,8 +25,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <PlaySound/>
     <RouterProvider router={router} />
   </React.StrictMode>
 )
