@@ -24,9 +24,12 @@ function NavBar() {
 
       <Link to={-1}>
       <Back Size='20'/>
-
       </Link>
 
+      <div className='flex gap-6 text-xl'>
+        <Link to={'/Home'}>Home</Link>
+        <Link to={'/Team'}>Team</Link>
+      </div>
 
       <button onClick={ChangeColorMode}>
       <DarkMode Size='20' Mode={isDarkMode?'Dark':''}  />
