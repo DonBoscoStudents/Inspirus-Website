@@ -48,7 +48,7 @@
   --c6:#E2B5F8;
 }
 
-.dark{
+.dark,:root{
   --base:#01000C;
   --text:#FFFFFF;
   --c1:#3120F3;
