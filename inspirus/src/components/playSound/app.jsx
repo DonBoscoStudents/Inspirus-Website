@@ -30,10 +30,10 @@ function PlaySound() {
     setPaused(prevState=>!prevState)
     paused?Music.pause():Music.play()
   }
-  return<div className='fixed bottom-4 right-4 flex flex-col gap-1 '> 
+  return<div className='fixed bottom-4 right-4 flex flex-col gap-0.5 '> 
 
 
-  <div className="text-white w-64 h-16 border-sky-100/10 border rounded-t-xl bg-slate-950/70 flex gap-3 overflow-hidden ">
+  <div className="text-white w-64 h-16 border-sky-100/10 border rounded-t-xl bg-slate-950 flex gap-3 overflow-hidden ">
     <img className="h-full"  src={c419} alt="" />
     <div className='justify-evenly flex flex-col'>
        <h1 className="font-bold text-lg">Now Playing </h1>
@@ -42,7 +42,7 @@ function PlaySound() {
     </div>
    
   </div>
-  <div id='player' className='text-white w-64 h-12  border-sky-100/10 border rounded-b-xl bg-slate-950/70 flex gap-3 overflow-hidden text items-center justify-center'>
+  <div id='player' className='text-white w-64 h-12  border-sky-100/10 border rounded-b-xl bg-slate-950 flex gap-3 overflow-hidden text items-center justify-center'>
   <button><Prev/></button>
   <button onClick={
     pauseMusic

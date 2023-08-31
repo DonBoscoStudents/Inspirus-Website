@@ -1,4 +1,5 @@
 import Hero from '../../components/hero/app'
+import MovingText from '../../components/movingText/app'
 import './style.module.css'
 
 // function Hero() {
@@ -10,6 +11,7 @@ import './style.module.css'
 function Home() {
     return <div>
       <Hero/>
+      <MovingText/>
     </div>;
   }
   
