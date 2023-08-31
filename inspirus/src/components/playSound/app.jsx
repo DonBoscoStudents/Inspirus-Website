@@ -1,7 +1,7 @@
 import c419 from '../../static/c418.jpg'
 import './playSound.css'
 import  MinecraftMusic from '../../static/Audio/Minecraft.mp3'
-import {Play,Prev,Next, Pause} from '../../components/icons'
+import {Play,Prev,Next, Pause} from '../icons'
 import { useState } from 'react'
 const Music = new Audio(MinecraftMusic)
 
