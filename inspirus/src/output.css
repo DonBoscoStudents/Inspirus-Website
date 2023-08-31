@@ -712,11 +712,6 @@ video {
   font-family: Rubik;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -843,13 +838,6 @@ video {
   .sm\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 
