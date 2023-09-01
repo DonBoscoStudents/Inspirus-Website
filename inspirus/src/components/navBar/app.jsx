@@ -43,7 +43,7 @@ function NavBar() {
     }
   }
 
-    return <div className='flex justify-between p-3'>
+    return <div className='fixed w-screen bg-primary flex justify-between p-5'>
 
       <Link to={-1}>
       <Back Size='20'/>
