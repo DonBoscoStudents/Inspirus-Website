@@ -16,8 +16,9 @@ export default {
     },
     extend: {
       colors: {
-        "primary": "var(--base)",
-        "text": "var(--text)",
+        "primary": "var(--primary)",
+        "primary-2": "var(--primary-2)",
+        "textColor": "var(--textColor)",
         "c1": "var(--c1)",
         "c2": "var(--c2)",
         "c3": "var(--c3)",
