@@ -38,7 +38,8 @@
 
 
 .light{
-  --base:#8EA7E9;
+  --primary:#8EA7E9;
+  --primary-2:hsl(224,60%, 85%);
   --textColor:#01000C;
   --c1:#9289FF;
   --c2:#ADEBFF;
@@ -49,7 +50,8 @@
 }
 
 .dark{
-  --base:#01000C;
+  --primary:#01000C;
+  --primary-2:hsl(247, 70%, 8%);
   --textColor:#FFFFFF;
   --c1:#3120F3;
   --c2:#0079FF;
