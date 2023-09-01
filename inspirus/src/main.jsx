@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import LoadingPage from './pages/LoadingPage/App'
+import LoadingPage from './pages/LoadingPage/main'
 
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Home from './pages/Home/Home'
+import Home from './pages/Home/main'
 import PlaySound from './components/playSound/app'
 
 
