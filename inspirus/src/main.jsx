@@ -3,29 +3,24 @@ import ReactDOM from 'react-dom/client'
 
 import LoadingPage from './pages/LoadingPage/main'
 
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Home from './pages/Home/main'
+import {Routes,Route,BrowserRouter} from 'react-router-dom'
+import Home from './pages/Home/app'
+// import Team from './pages/Team/main'
 
 
 
 
-
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element:<LoadingPage/>
-  },
-  {
-    path:"/Home",
-    element:<Home/>
-  }
-])
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter >
+    <Routes>
+      <Route path='/Home' element={<Home/>}/>
+      <Route path='/' element={<LoadingPage/>}/>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 )
 
