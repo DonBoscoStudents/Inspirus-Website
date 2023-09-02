@@ -655,10 +655,6 @@ video {
   gap: 0.75rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -689,13 +685,9 @@ video {
   border-width: 2px;
 }
 
-.bg-\[\#F0323E\] {
+.bg-\[\#3245f0\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(240 50 62 / var(--tw-bg-opacity));
-}
-
-.bg-c1 {
-  background-color: var(--c1);
+  background-color: rgb(50 69 240 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -713,11 +705,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -825,51 +812,60 @@ video {
 }
 
 @font-face {
-  font-family: 'NotoSerif';
+  font-family: "NotoSerif";
 
-  src: url('/Fonts/NotoSerif-VariableFont_wdth,wght.ttf') format('ttf'),
+  src: url("/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'IBMPlexSerif';
+  font-family: "IBMPlexSerif";
 
   font-weight: 500;
 
-  src: url('/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf') format('ttf'),
+  src: url("/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'NotoSans';
+  font-family: "NotoSans";
 
   font-style: normal;
 
   font-weight: 100;
 
-  src: url('/Fonts/Noto Sans/NotoSans-Thin.ttf') format('ttf'),
+  src: url("/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
 }
 
-.light{
-  --primary:#8EA7E9;
-  --primary-2:hsl(224,60%, 85%);
-  --textColor:#01000C;
-  --c1:#9289FF;
-  --c2:#ADEBFF;
-  --c3:#C7FAB5;
-  --c4:#FFB7AD;
-  --c5:#FFA1DA;
-  --c6:#E2B5F8;
+.light {
+  --primary: #8ea7e9;
+  --primary-2: hsl(224, 60%, 85%);
+  --textColor: #01000c;
+  --c1: #9289ff;
+  --c2: #adebff;
+  --c3: #c7fab5;
+  --c4: #ffb7ad;
+  --c5: #ffa1da;
+  --c6: #e2b5f8;
 }
 
-.dark{
-  --primary:#01000C;
-  --primary-2:hsl(247, 70%, 8%);
-  --textColor:#FFFFFF;
-  --c1:#3120F3;
-  --c2:#0079FF;
-  --c3:#00DFA2;
-  --c4:#E85313;
-  --c5:#FB1048;
-  --c6:#E813B9;
+.dark {
+  --primary: #01000c;
+  --primary-2: hsl(247, 70%, 8%);
+  --textColor: #ffffff;
+  --c1: #3120f3;
+  --c2: #0079ff;
+  --c3: #00dfa2;
+  --c4: #e85313;
+  --c5: #fb1048;
+  --c6: #e813b9;
+}
+
+::-webkit-scrollbar{
+  width: 2px;
+  background: var(--primary-2);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--textColor);
 }
 
 @media (min-width: 640px) {
@@ -904,5 +900,3 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
-

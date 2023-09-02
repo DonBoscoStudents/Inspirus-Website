@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client'
 import LoadingPage from './pages/LoadingPage/main'
 
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Home from './pages/Home/Home'
-
-
+import Home from './pages/Home/main'
+import Team from './pages/Team/main'
+import EventPage from './pages/Event/main'
 
 
 
@@ -18,7 +18,15 @@ const router = createBrowserRouter([
   {
     path:"/Home",
     element:<Home/>
-  }
+  },
+  {
+    path:"/Team",
+    element:<Team/>
+  },
+  {
+    path:"/Events",
+    element:<EventPage/>
+  },
 ])
 
 

@@ -2,63 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: "Minecraft";
-    src: url("/Fonts/Minecraft.ttf");
-  }
-
-@font-face {
-    font-family: "Rubik";
-    src: url("/Fonts/Rubik-VariableFont_wght.ttf");
+  font-family: "Minecraft";
+  src: url("/Fonts/Minecraft.ttf");
 }
 
-
 @font-face {
-    font-family: "ElegantoSans";
-    src: url("/Fonts/ElegantoSans-Thin.ttf");
-  }
-  @font-face {
-    font-family: 'NotoSerif';
-    src: url('/Fonts/NotoSerif-VariableFont_wdth,wght.ttf') format('ttf'),
-  }
-
-
-@font-face {
-    font-family: 'IBMPlexSerif';
-    font-weight: 500;
-    src: url('/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf') format('ttf'),
-  }
-@font-face {
-    font-family: 'NotoSans';
-    font-style: normal;
-    font-weight: 100;
-    src: url('/Fonts/Noto Sans/NotoSans-Thin.ttf') format('ttf'),
-  }
-
-
-.light{
-  --primary:#8EA7E9;
-  --primary-2:hsl(224,60%, 85%);
-  --textColor:#01000C;
-  --c1:#9289FF;
-  --c2:#ADEBFF;
-  --c3:#C7FAB5;
-  --c4:#FFB7AD;
-  --c5:#FFA1DA;
-  --c6:#E2B5F8;
+  font-family: "Rubik";
+  src: url("/Fonts/Rubik-VariableFont_wght.ttf");
 }
 
-.dark{
-  --primary:#01000C;
-  --primary-2:hsl(247, 70%, 8%);
-  --textColor:#FFFFFF;
-  --c1:#3120F3;
-  --c2:#0079FF;
-  --c3:#00DFA2;
-  --c4:#E85313;
-  --c5:#FB1048;
-  --c6:#E813B9;
+@font-face {
+  font-family: "ElegantoSans";
+  src: url("/Fonts/ElegantoSans-Thin.ttf");
+}
+@font-face {
+  font-family: "NotoSerif";
+  src: url("/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "IBMPlexSerif";
+  font-weight: 500;
+  src: url("/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
+}
 
+.light {
+  --primary: #8ea7e9;
+  --primary-2: hsl(224, 60%, 85%);
+  --textColor: #01000c;
+  --c1: #9289ff;
+  --c2: #adebff;
+  --c3: #c7fab5;
+  --c4: #ffb7ad;
+  --c5: #ffa1da;
+  --c6: #e2b5f8;
+}
+
+.dark {
+  --primary: #01000c;
+  --primary-2: hsl(247, 70%, 8%);
+  --textColor: #ffffff;
+  --c1: #3120f3;
+  --c2: #0079ff;
+  --c3: #00dfa2;
+  --c4: #e85313;
+  --c5: #fb1048;
+  --c6: #e813b9;
+}
+
+::-webkit-scrollbar{
+  width: 2px;
+  background: var(--primary-2);
+
+}
+::-webkit-scrollbar-thumb{
+  background: var(--textColor);
+
+}
