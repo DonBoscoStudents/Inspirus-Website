@@ -1,0 +1,74 @@
+.wrapper {
+ background-color: #01000c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MovingText {
+  /*background-color: #01000c;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.MovingText::before, .MovingText::after {
+  height: 200px;
+  width: 100px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #01000c 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+.MovingText::before {
+  left: 0;
+  top: 0;
+}
+.MovingText::after {
+  right:0;
+  top:0;
+  transform: rotateZ(180deg);
+}
+
+.Move {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.Move-Right {
+  height: 70px;
+  display: flex;
+}
+
+.Move-Left{
+  height: 70px;
+  display: flex;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Move-Right {
+    animation: Moving-Right infinite 16s linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .Move-Left {
+    animation: Moving-Left 25s infinite linear;
+  }
+}
+
+@keyframes Moving-Right {
+  100% {transform: translateX(0);}
+  0% {transform: translateX(-100%);}
+}
+
+@keyframes Moving-Left {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
