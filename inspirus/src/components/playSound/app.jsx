@@ -30,7 +30,7 @@ function PlaySound() {
     setPaused(prevState=>!prevState)
     paused?Music.pause():Music.play()
   }
-  return<div className='fixed bottom-4 right-4 flex flex-col gap-0.5 '> 
+  return<div className='hidden fixed bottom-4 right-4 flex-col gap-0.5 '> 
 
 
   <div className="text-textColor w-64 h-16   rounded-t-xl bg-primary-2 flex gap-3 overflow-hidden ">

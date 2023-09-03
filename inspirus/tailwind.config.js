@@ -13,6 +13,7 @@ export default {
       'NotoSerif':'Rubik',
       'IBMPlexSerif':'IBMPlexSerif',
       'ElegantoSans':'ElegantoSans',
+      'Poppins':'Poppins',
     },
     extend: {
       colors: {

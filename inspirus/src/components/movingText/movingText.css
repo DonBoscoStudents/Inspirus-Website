@@ -1,0 +1,26 @@
+.t1{
+    animation: 80s T1Ani linear 0s infinite;
+}
+.t2{
+    animation: 90s T1Ani linear 0s infinite;
+}
+
+
+@keyframes T1Ani {
+    0%{
+        translate: 0ch 0; 
+    }
+    100%{
+        translate: -20ch 0; 
+
+    }
+}
+@keyframes T2Ani {
+    0%{
+        translate: 0ch 0; 
+    }
+    100%{
+        translate: -20ch 0; 
+
+    }
+}

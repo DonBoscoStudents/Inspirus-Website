@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element:<Team/>
   },
   {
-    path:"/Events",
+    path:"/Events/:eventName",
     element:<EventPage/>
   },
 ])

@@ -26,6 +26,12 @@
   font-weight: 500;
   src: url("/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url("/Fonts/Poppins/Poppins-Light.ttf") format("ttf");
+}
 @font-face {
   font-family: "NotoSans";
   font-style: normal;

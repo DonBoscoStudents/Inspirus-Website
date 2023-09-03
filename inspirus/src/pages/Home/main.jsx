@@ -10,7 +10,7 @@ function Home() {
       <NavBar/>
       <PlaySound/>
       <Hero/>
-      <MovingText/>
+      <MovingText text='INSPIRUS'/>
 <Events/>
     </div>;
   }
