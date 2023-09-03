@@ -1,4 +1,6 @@
 import "../../output.css";
+import { useEffect } from "react";
+import Footer from "../../components/footer/app";
 import { useParams } from "react-router-dom";
 import NavBar from "../../components/navBar/app";
 import MovingText from "../../components/movingText/app";
@@ -510,6 +512,9 @@ let EventData = {
 
 
 function EventPage(Params) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   Params = useParams();
   console.log(Params)
   let CurrentEventDetails = EventData[Params['eventName'].toLowerCase()];
@@ -551,6 +556,7 @@ function EventPage(Params) {
         <p>{CurrentEventDetails['eventDetails']}</p>
       </div>
       </div>
+      <Footer/>
     </div>
   );
 }
