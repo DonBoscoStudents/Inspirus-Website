@@ -66,7 +66,6 @@ const EventsDict= [
 
 function Events() {
   const colors = ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'];
-
   return <div className='flex flex-col items-center mt-10'>
     <div className='w-[90%] md:w-[90%] lg:w-[80%] flex flex-col'>
     <h1 className='text-3xl md:text-5xl md:self-center md:mb-8 font-IBMPlexSerif font-bold' >The Events</h1>
