@@ -39,10 +39,13 @@
   src: url("/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
 }
 
-:root,.light {
+:root,
+.light {
   --primary: #8ea7e9;
   --primary-2: hsl(224, 60%, 85%);
+  --primary-3: hsl(224, 97%, 70%);
   --textColor: #01000c;
+  --textColorHover: #3160e0;
   --c1: #9289ff;
   --c2: #adebff;
   --c3: #c7fab5;
@@ -53,94 +56,178 @@
 
 .dark {
   --primary: #01000c;
-  --primary-2: hsl(247, 70%, 8%);
+  --primary-2: hsl(247, 67%, 13%);
+  --primary-3: hsl(243, 90%, 4%);
   --textColor: #ffffff;
+  --textColorHover: #988bfb;
   --c1: #3120f3;
   --c2: #0079ff;
   --c3: #2dee8a;
+  --c3: #ee972d;
   --c4: #e85313;
   --c5: #fb1048;
   --c6: #e813b9;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 2px;
   background: var(--primary-2);
-
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: var(--textColor);
-
 }
 
-.nav{
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-background: var(--primary-2);
-height: 60px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 12px;
+.nav {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-3);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  & button{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    justify-content: center;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    &:hover{
+      background: var(--primary-2);
+    }
+  }
+  & div{
+    display: flex;
+    gap: 10px;
+    & a{
+      cursor: pointer;
+      font-family: Noto Sans;
+      font-weight: 500;
+      color: var(--textColor);
+      &:hover{
+        color: var(--textColorHover);
+      }
+    }
+  }
 }
-body{
+body {
+  background-image: url('./Assets/grain_dark.png');
   margin-top: 60px;
 }
 
-#RollingText{
+#RollingText {
+  user-select: none;
   overflow: hidden;
 }
-#RollingText h1{
+#RollingText h1 {
   font-family: Noto Serif;
   font-size: 171px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
   animation: 80s T1Ani linear 0s infinite;
-
 }
-#RollingText h2{
+#RollingText h2 {
   font-family: Eleganto Sans;
   font-style: normal;
   font-weight: 100;
   font-size: 100px;
   line-height: 90%;
   animation: 90s T1Ani linear 0s infinite;
-
-
 }
 
 @keyframes T1Ani {
-  0%{
-      translate: 0ch 0; 
+  0% {
+    translate: 0ch 0;
   }
-  100%{
-      translate: -20ch 0; 
-
+  100% {
+    translate: -20ch 0;
   }
 }
 @keyframes T2Ani {
-  0%{
-      translate: 0ch 0; 
+  0% {
+    translate: 0ch 0;
   }
-  100%{
-      translate: -20ch 0; 
-
+  100% {
+    translate: -20ch 0;
   }
 }
 
-.card{
+.card {
   cursor: pointer;
   aspect-ratio: 16/10;
   width: 20rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 1rem;
-  border-radius: 8px;
-  outline: rgba(128, 128, 128, 0.2) 1px solid;
-  transition: outline .3s;
-  &:hover{
-  outline: rgb(237, 237, 237) 1px solid;
+  position: relative;
+  /* outline: rgba(128, 128, 128, 0.2) 1px solid; */
+  transition: outline 0.3s;
+  border-radius: 7px;
+  z-index: 1;
+  /* &:hover .cardOutline::after{
+    opacity: 1;
+  } */
+  overflow: hidden;
+  background-size: cover;
+  &:hover::after{
+    opacity: .8;
+  }
+  &::after{
+    pointer-events: none;
+    transition: opacity .8s;
+    opacity: 0;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    mix-blend-mode: screen;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Assets/stars-slide.gif');
+  }
+
 }
+.cardOutline {
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1px;
+  /* background: white; */
+  position: relative;
+  /* z-index: -1; */
+  transition: scale .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover{
+    scale: 1.01;
+  &::after{
+opacity: 1;
+  }}
+  &::after {
+    opacity: 0;
+    content: "";
+    display: flex;
+    position: absolute;
+    background: linear-gradient(transparent,var(--textColor));
+    width: 200%;
+    aspect-ratio: 1/1;
+    top: -50%;
+    left: -50%;
+    animation: rotateGradient 8s linear infinite;
+    transition: opacity .5s;
+  }
+}
+
+
+@keyframes rotateGradient {
+  0% {
+    rotate:0deg;
+  }
+  100% {
+    rotate:360deg;
+  }
 }

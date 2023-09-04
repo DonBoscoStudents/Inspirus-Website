@@ -7,8 +7,8 @@ NavBar.innerHTML=`
 arrow_back
 </span></button>
 <div>
-<a>Home</a>
-<a>Team</a>
+<a href='/'>Home</a>
+<a href='/Pages/Team/' >Team</a>
 </div>
 <button onclick="ChangeColorMode()"><span class="material-symbols-outlined">
 light_mode
