@@ -57,7 +57,7 @@
   --textColor: #ffffff;
   --c1: #3120f3;
   --c2: #0079ff;
-  --c3: #00dfa2;
+  --c3: #2dee8a;
   --c4: #e85313;
   --c5: #fb1048;
   --c6: #e813b9;
@@ -129,4 +129,18 @@ body{
       translate: -20ch 0; 
 
   }
+}
+
+.card{
+  cursor: pointer;
+  aspect-ratio: 16/10;
+  width: 20rem;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 8px;
+  outline: rgba(128, 128, 128, 0.2) 1px solid;
+  transition: outline .3s;
+  &:hover{
+  outline: rgb(237, 237, 237) 1px solid;
+}
 }
