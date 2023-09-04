@@ -78,9 +78,55 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-background: var(--primary);
+background: var(--primary-2);
 height: 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px;
 }
 body{
-  margin-top: 62px;
+  margin-top: 60px;
+}
+
+#RollingText{
+  overflow: hidden;
+}
+#RollingText h1{
+  font-family: Noto Serif;
+  font-size: 171px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  animation: 80s T1Ani linear 0s infinite;
+
+}
+#RollingText h2{
+  font-family: Eleganto Sans;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 100px;
+  line-height: 90%;
+  animation: 90s T1Ani linear 0s infinite;
+
+
+}
+
+@keyframes T1Ani {
+  0%{
+      translate: 0ch 0; 
+  }
+  100%{
+      translate: -20ch 0; 
+
+  }
+}
+@keyframes T2Ani {
+  0%{
+      translate: 0ch 0; 
+  }
+  100%{
+      translate: -20ch 0; 
+
+  }
 }
