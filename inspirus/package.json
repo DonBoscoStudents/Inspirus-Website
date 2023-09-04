@@ -1,0 +1,17 @@
+{
+  "name": "inspirus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "dev": "",
+    "tail":"npx tailwindcss -i index.css -o output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
+
+
