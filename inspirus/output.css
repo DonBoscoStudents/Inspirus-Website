@@ -917,3 +917,17 @@ body {
     rotate:360deg;
   }
 }
+
+/* all requied values to change just the background of the page */
+
+.page{
+  background-color: #3120F3;
+  /*background*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: grid;
+  color: white;
+  padding: 0px 0px 20px 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
