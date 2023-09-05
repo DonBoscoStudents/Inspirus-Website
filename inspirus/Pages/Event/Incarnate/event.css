@@ -1,0 +1,111 @@
+body{
+    background-color: var(--c1);
+}
+
+
+/* text */
+/* h2{
+    font-weight: 900;
+    margin: 0px 0px;
+    font-size: 45px;
+    text-shadow: 6px 6px rgb(0, 30, 129);
+} */
+/* h3{
+    font-weight: 800;
+    margin: 5px 0px;
+    font-size: larger;
+    text-shadow: 6px 6px rgb(0, 30, 129);
+} */
+/* p{
+    margin: 8px 0px;
+    font-size: 18px;
+} */
+/* a{
+    padding: 0px;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+} */
+/* .title_section{
+    
+    padding: 0px 20px;
+} */
+/* li{
+    font-size: larger;
+} */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0px 20px;
+    width: auto;
+    justify-content: space-between;
+}
+
+.container_left{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_right{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_section{
+    margin: 0px 0px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile_img{
+    width: 120px;
+    height: 120px;
+    background-color: white;
+}
+
+.profile{
+    margin: 10px 0px;
+    display: flex;
+}
+
+.profile_info{
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register{
+    text-align: left;
+    padding: 0px 20px;
+    font-size: larger;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    width: 200px;
+    height: 60px;
+    justify-content: center;
+    transition: 400ms;
+
+}
+
+.register:hover{
+    transition: 400ms;
+    box-shadow: 10px 10px rgb(0, 30, 129);
+}
+
+.reg_box{
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+
+    width: auto;
+    height: auto;
+}
+
