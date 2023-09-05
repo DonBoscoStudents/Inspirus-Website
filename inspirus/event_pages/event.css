@@ -56,13 +56,13 @@ h2{
     font-weight: 900;
     margin: 0px 0px;
     font-size: 45px;
-    text-shadow: 12px 12px rgb(0, 30, 129);
+    text-shadow: 6px 6px rgba(0, 0, 0, 0.479);
 }
 h3{
     font-weight: 800;
     margin: 5px 0px;
     font-size: larger;
-    text-shadow: 6px 6px rgb(0, 30, 129);
+    text-shadow: 6px 6px rgba(0, 0, 0, 0.479);
 }
 p{
     margin: 8px 0px;
@@ -149,7 +149,7 @@ li{
 
 .register:hover{
     transition: 400ms;
-    box-shadow: 10px 10px rgb(0, 30, 129);
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.479);
 }
 
 .reg_box{
@@ -222,7 +222,7 @@ li{
 }
 
 .social:hover{
-    box-shadow: 10px 10px rgb(0, 30, 129);
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.479);
     transition: 500ms;
 }
 
