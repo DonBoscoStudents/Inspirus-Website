@@ -2,8 +2,9 @@
 export default {
   content: [
   "./index.html",
-  "./Pages/**/*.{js,ts,jsx,tsx}",
-  "./src/pages/LoadingPage/App.jsx"
+  "./Pages/**/*.{js,ts,jsx,tsx,html}",
+  "./src/pages/LoadingPage/App.jsx",
+  "Pages/Event/Incarnate/index.html"
 ],
   theme: {
     fontFamily:{

@@ -1,30 +1,38 @@
 
-
 const NavBar= document.createElement('div')
 
 NavBar.innerHTML=`
-<button><span class="material-symbols-outlined">
+<button onclick="history.back()"><span class="material-symbols-outlined">
 arrow_back
 </span></button>
 <div>
 <a href='/'>Home</a>
 <a href='/Pages/Team/' >Team</a>
 </div>
+<div>
+<i id="Quotes">Inspirus 7</i>
 <button onclick="ChangeColorMode()"><span class="material-symbols-outlined">
 light_mode
 </span></button>
+</div>
 `
+
+const Quotes=[
+  "GameJam or Mango Jam",
+  "Potatoes",
+  "0010110",
+  '𐊪𐋎𐊆𐊋𐋇𐊀𐋃𐊄𐋏'
+]
 
 NavBar.classList.add('nav')
 document.body.appendChild(NavBar)
 
+document.getElementById('Quotes').innerText=Quotes[Math.floor(Math.random()*Quotes.length)]
 
 window.onload=SetColorMode
 
   let isDarkMode = true
   function SetColorMode(){
-  
-
     if(window.localStorage.getItem('color-scheme')=='dark'){
       document.body.classList.add('dark')
       document.body.classList.remove('light')
