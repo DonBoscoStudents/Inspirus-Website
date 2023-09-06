@@ -155,6 +155,13 @@
 .footer{
   background: var(--primary-2);
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  & iframe{
+   
+    width: 100%;
+    height: 100%;
+  }
 }
 body {
   background-image: url('./Assets/grain_dark.png');
