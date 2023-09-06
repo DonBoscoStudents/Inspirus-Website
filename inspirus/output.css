@@ -958,6 +958,16 @@ video {
   }
 }
 
+#hero{
+  height: auto;
+}
+
+@media (min-width:768px) {
+  #hero{
+    height: 100vh;
+  }
+}
+
 .footer{
   background: var(--primary-2);
   height: 100vh;
@@ -993,6 +1003,25 @@ body {
   animation: 90s T1Ani linear 0s infinite;
 }
 
+@media (min-width:1000px) {
+  #RollingText h1 {
+    font-family: Noto Serif;
+    font-size: 600px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80%;
+    animation: 80s T1Ani linear 0s infinite;
+  }
+
+  #RollingText h2 {
+    font-family: Eleganto Sans;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 300px;
+    line-height: 90%;
+  }
+}
+
 @keyframes T1Ani {
   0% {
     translate: 0ch 0;
@@ -1021,7 +1050,7 @@ body {
   position: relative;
   /* outline: rgba(128, 128, 128, 0.2) 1px solid; */
   transition: outline 0.3s;
-  border-radius: 7px;
+  border-radius: 9px;
   z-index: 1;
   /* &:hover .cardOutline::after{
     opacity: 1;
@@ -1032,7 +1061,6 @@ body {
     opacity: 1;
   }
   &::after{
-    border-radius: 7px;
     pointer-events: none;
     transition: opacity .8s;
     opacity: 0;
@@ -1056,7 +1084,7 @@ body {
 }
 
 .cardOutline {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   padding: 1px;
   /* background: white; */
@@ -1066,7 +1094,7 @@ body {
   &:hover{
     scale: 1.01;
     &::after{
-      opacity: 1;
+      opacity: 10;
     }
   }
   &::after {
