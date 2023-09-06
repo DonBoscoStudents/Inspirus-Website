@@ -37,22 +37,22 @@ window.onload=SetColorMode
       document.body.classList.add('dark')
       document.body.classList.remove('light')
       isDarkMode=true
-      document.getElementById('ColorModeICON').innerHTML=DarkMode
+      document.getElementById('ColorModeICON').innerHTML=LightMode
     }else if(window.localStorage.getItem('color-scheme')=='light'){
       document.body.classList.add('light')
       document.body.classList.remove('dark')
       isDarkMode=false
-      document.getElementById('ColorModeICON').innerHTML=LightMode
+      document.getElementById('ColorModeICON').innerHTML=DarkMode
 
     }else{
         if(window.matchMedia('(prefers-color-scheme: dark)').matches){
             document.body.classList.add('dark')
             isDarkMode=true
-            document.getElementById('ColorModeICON').innerHTML=DarkMode
+            document.getElementById('ColorModeICON').innerHTML=LightMode
           }else{
             document.body.classList.add('light')
             isDarkMode=false
-            document.getElementById('ColorModeICON').innerHTML=LightMode
+            document.getElementById('ColorModeICON').innerHTML=DarkMode
           }
     }
   }
@@ -62,11 +62,11 @@ window.onload=SetColorMode
     document.body.classList.toggle('light')
     if(isDarkMode){
       window.localStorage.setItem('color-scheme','dark')
-      document.getElementById('ColorModeICON').innerHTML=DarkMode
+      document.getElementById('ColorModeICON').innerHTML=LightMode
         console.log(window.localStorage)
     }else{
       window.localStorage.setItem('color-scheme','light')
-      document.getElementById('ColorModeICON').innerHTML=LightMode
+      document.getElementById('ColorModeICON').innerHTML=DarkMode
       console.log(window.localStorage)
 
     }
