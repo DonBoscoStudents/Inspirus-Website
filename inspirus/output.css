@@ -590,12 +590,24 @@ video {
   height: 3rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-48 {
@@ -650,6 +662,14 @@ video {
   gap: 2rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .bg-\[var\(--pageColor\)\] {
   background-color: var(--pageColor);
 }
@@ -698,6 +718,10 @@ video {
 
 .to-textColor {
   --tw-gradient-to: var(--textColor) var(--tw-gradient-to-position);
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
@@ -1123,6 +1147,10 @@ body {
 
 .hover\:text-primary-2:hover {
   color: var(--primary-2);
+}
+
+.hover\:text-textColorHover:hover {
+  color: var(--textColorHover);
 }
 
 .hover\:outline-dashed:hover {
