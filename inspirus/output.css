@@ -1085,6 +1085,7 @@ body {
     opacity: 1;
   }
   &::after{
+    border: inherit;
     pointer-events: none;
     transition: opacity .8s;
     opacity: 0;
@@ -1108,9 +1109,10 @@ body {
 }
 
 .cardOutline {
+  background: none;
   border-radius: 10px;
   overflow: hidden;
-  padding: 1px;
+  /* padding: 1px; */
   /* background: white; */
   position: relative;
   /* z-index: -1; */
@@ -1118,7 +1120,7 @@ body {
   &:hover{
     scale: 1.01;
     &::after{
-      opacity: 10;
+      opacity: 0;
     }
   }
   &::after {
@@ -1132,16 +1134,6 @@ body {
     top: 0%;
     left: 0%;
     transition: opacity .5s;
-  }
-}
-
-@keyframes rotateGradient {
-  0% {
-    rotate:0deg;
-  }
-
-  100% {
-    rotate:360deg;
   }
 }
 
@@ -1222,4 +1214,6 @@ body {
     padding-left: 1px;
   }
 }
+
+
 
