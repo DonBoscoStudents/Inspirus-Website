@@ -1032,6 +1032,16 @@ video {
   }
 }
 
+@media (max-width:800px) {
+  .footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 40vh;
+    & iframe{
+      height: 100%;
+    }
+  }
+}
+
 body {
   background-image: url('./Assets/grain_dark.png');
   margin-top: 60px;
