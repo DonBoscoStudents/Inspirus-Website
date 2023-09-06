@@ -139,21 +139,7 @@
       }
     }
   }
-  & .rightNavBarIConNQuote{
-    display: flex;
-    align-items: center;
-    position: relative;
-    & i{
-      /* top: 40px; */
-      right: 40px;
-      white-space: nowrap;
-      position: absolute;
-      font-weight: 100;
-      opacity: .1;
-      
-    }
-   
-  }
+  
 }
 
 .footer{
