@@ -56,6 +56,10 @@ const Events = {
     "MemeOff": {
       'Link': '',
       'preFilledLink': ''
+    },
+    "Cubix": {
+      'Link': 'https://forms.gle/E7rNGEej3BJQKXM49',
+      'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLSepFeVggP7vWxzknlQnSyJ7GJsq16vRLouOzOyJjAM4yGqcew/viewform?usp=pp_url&entry.530319194=Rhys&entry.943363021=123342413&entry.4919528=2114@dbcegoa.in&entry.1601138515=DBCE'
     }
   };
 
