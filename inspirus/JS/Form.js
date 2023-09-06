@@ -59,4 +59,5 @@ const Events = {
 
 function RegisterForm(Eventname){
     window.location.href=Events[Eventname]['Link']
+    
 }
