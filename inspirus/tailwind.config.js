@@ -2,8 +2,10 @@
 export default {
   content: [
   "./index.html",
-  "./Pages/**/*.{js,ts,jsx,tsx}",
-  "./src/pages/LoadingPage/App.jsx"
+  "./Pages/**/*.{js,ts,jsx,tsx,html}",
+  "./src/pages/LoadingPage/App.jsx",
+  "Pages/Event/Incarnate/index.html",
+  "Pages/Team/index.html"
 ],
   theme: {
     fontFamily:{
@@ -20,6 +22,7 @@ export default {
         "primary": "var(--primary)",
         "primary-2": "var(--primary-2)",
         "textColor": "var(--textColor)",
+        "textColorHover": "var(--textColorHover)",
         "c1": "var(--c1)",
         "c2": "var(--c2)",
         "c3": "var(--c3)",

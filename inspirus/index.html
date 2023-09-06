@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inspirus</title>
   <script defer src="./JS/NavBar.js"></script>
+  <script defer src="./JS/Footer.js"></script>
+  <script defer src="./JS/HREF.js"></script>
   <link rel="stylesheet" href="./output.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ 
 </head>
 
 <body class="dark bg-primary text-textColor">
 
-  <section id="hero" class="p-8 h-screen">
+  <section id="hero" class="lg:p-8 p-4 h-screen">
     <h1 class="font-IBMPlexSerif text-6xl font-black">Inspirus 7</h1>
-    <p class="w-[min(70%,40rem)] font-NotoSans font-thin mt-3">Prepare to delve into the realms of coding,
+    <p class="lg:w-[min(70%,40rem)] font-NotoSans font-thin mt-3">Prepare to delve into the realms of coding,
       collaboration, and ingenuity as we embark on a journey to shape the future through technology. Proudly presented
       by the Council of Computer Department Students (C-CODES) in partnership with the Department of Computer
       Engineering, the 7th edition of INSPIRUS is scheduled to take place on October 6th and 7th, 2023. INSPIRUS stands
@@ -24,7 +25,7 @@
       compete, innovate, and create in pursuit of fantastic prizes.
     </p>
   </section>
-  <section id="RollingText">
+  <section id="RollingText" class="mt-12">
     <h1>
       INSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUSINSPIRUS
     </h1>
@@ -37,10 +38,10 @@
     <h1 class="font-IBMPlexSerif font-bold text-5xl mb-8 text-center">Events</h1>
     <div class="flex flex-wrap gap-4 md justify-center">
 
-      <div class="cardOutline" onclick="href('/Pages/Event/Inspirathon')">
+      <div class="cardOutline" onclick="href('/Pages/Event/Inspirathon/')">
         <div class="card bg-c1">
           <h1 class="font-rubik text-2xl font-bold">INSPIRATHON</h1>
-          <p class="font-poppins font-light">"Unlock your creative potential to change the world at our student
+          <p class="font-poppins font-light text-sm w-full pr-4">"Unlock your creative potential to change the world at our student
             hackathon. Join us for 24 hours of innovation</p>
         </div>
       </div>
@@ -139,9 +140,7 @@
     </div>
 
   </section>
-  <section id="Footer" class="mt-[10rem] bg-primary-2 h-96">
 
-  </section>
 
 </body>
 

@@ -4,39 +4,59 @@
 
 @font-face {
   font-family: "Minecraft";
-  src: url("/Fonts/Minecraft.ttf");
+  src: url("public/Fonts/Minecraft.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
-  src: url("/Fonts/Rubik-VariableFont_wght.ttf");
+  src: url("public/Fonts/Rubik-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "ElegantoSans";
-  src: url("/Fonts/ElegantoSans-Thin.ttf");
+  src: url("public/Fonts/ElegantoSans-Thin.ttf");
 }
 @font-face {
   font-family: "NotoSerif";
-  src: url("/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
+  src: url("public/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "IBMPlexSerif";
+  font-weight: 100;
+  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Thin.ttf") format("ttf");
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  font-weight: 200;
+  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: "IBMPlexSerif";
   font-weight: 500;
-  src: url("/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
+  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  font-weight: 900;
+  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  font-weight: 600;
+  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-SemiBold.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Poppins";
   font-weight: 200;
-  src: url("/Fonts/Poppins/Poppins-Light.ttf") format("ttf");
+  src: url("public/Fonts/Poppins/Poppins-Light.ttf") format("ttf");
 }
 @font-face {
   font-family: "NotoSans";
   font-style: normal;
   font-weight: 100;
-  src: url("/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
+  src: url("public/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
 }
 
 :root,
@@ -52,6 +72,7 @@
   --c4: #ffb7ad;
   --c5: #ffa1da;
   --c6: #e2b5f8;
+
 }
 
 .dark {
@@ -84,6 +105,7 @@
   left: 0;
   right: 0;
   background: var(--primary-3);
+  background-image: url('/Assets/grain_dark.png');
   height: 60px;
   display: flex;
   align-items: center;
@@ -101,9 +123,12 @@
       background: var(--primary-2);
     }
   }
-  & div{
+  & .pages{
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 10px;
+ 
     & a{
       cursor: pointer;
       font-family: Noto Sans;
@@ -114,6 +139,22 @@
       }
     }
   }
+  
+}
+#hero{
+  height: auto;
+}
+@media (min-width:768px) {
+  #hero{
+    height: 100vh;
+  }
+
+
+}
+
+.footer{
+  background: var(--primary-2);
+  height: 100vh;
 }
 body {
   background-image: url('./Assets/grain_dark.png');
@@ -126,7 +167,7 @@ body {
 }
 #RollingText h1 {
   font-family: Noto Serif;
-  font-size: 171px;
+  font-size: 200px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
@@ -140,6 +181,26 @@ body {
   line-height: 90%;
   animation: 90s T1Ani linear 0s infinite;
 }
+
+@media (min-width:1000px) {
+  #RollingText h1 {
+    font-family: Noto Serif;
+    font-size: 600px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80%;
+    animation: 80s T1Ani linear 0s infinite;
+  }
+  #RollingText h2 {
+    font-family: Eleganto Sans;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 300px;
+    line-height: 90%;
+  }
+
+}
+
 
 @keyframes T1Ani {
   0% {
@@ -159,15 +220,16 @@ body {
 }
 
 .card {
+
   cursor: pointer;
   aspect-ratio: 16/10;
   width: 20rem;
-  /* overflow: hidden; */
   padding: 1rem;
   position: relative;
+
   /* outline: rgba(128, 128, 128, 0.2) 1px solid; */
   transition: outline 0.3s;
-  border-radius: 7px;
+  border-radius: 9px;
   z-index: 1;
   /* &:hover .cardOutline::after{
     opacity: 1;
@@ -175,7 +237,7 @@ body {
   overflow: hidden;
   background-size: cover;
   &:hover::after{
-    opacity: .8;
+    opacity: 1;
   }
   &::after{
     pointer-events: none;
@@ -185,17 +247,23 @@ body {
     display: block;
     top: 0;
     left: 0;
-    background-size: cover;
-    mix-blend-mode: screen;
+    background-size:cover;
+    background-position: 10%;
+    mix-blend-mode:screen;
     position: absolute;
     width: 100%;
     height: 100%;
+    background-image: url('./Assets/1bbbef16ac4ffcba1c2b97c3b2e4564c.gif');
+    background-image: url('./Assets/image_processing20201205-31537-nfigzc.gif');
+    background-image: url('./Assets/WarpTrails2.gif');
+    background-image: url('./Assets/200w.gif');
+    background-image: url('./Assets/tumblr_0b2bcf321b25c2596098117631f3c6d3_2c665903_500.gif');
     background-image: url('./Assets/stars-slide.gif');
   }
 
 }
 .cardOutline {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   padding: 1px;
   /* background: white; */
@@ -205,19 +273,18 @@ body {
   &:hover{
     scale: 1.01;
   &::after{
-opacity: 1;
+opacity: 10;
   }}
   &::after {
     opacity: 0;
     content: "";
     display: flex;
     position: absolute;
-    background: linear-gradient(transparent,var(--textColor));
-    width: 200%;
+    background: linear-gradient(30deg,transparent,white,transparent);
+    width: 100%;
     aspect-ratio: 1/1;
-    top: -50%;
-    left: -50%;
-    animation: rotateGradient 8s linear infinite;
+     top: 0%;
+    left: 0%; 
     transition: opacity .5s;
   }
 }
@@ -231,3 +298,4 @@ opacity: 1;
     rotate:360deg;
   }
 }
+
