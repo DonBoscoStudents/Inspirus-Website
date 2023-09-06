@@ -5,7 +5,8 @@ export default {
   "./Pages/**/*.{js,ts,jsx,tsx,html}",
   "./src/pages/LoadingPage/App.jsx",
   "Pages/Event/Incarnate/index.html",
-  "Pages/Team/index.html"
+  "Pages/Team/index.html",
+  "Pages/Event/Inspirathon/index.html"
 ],
   theme: {
     fontFamily:{

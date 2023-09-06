@@ -538,6 +538,21 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -576,6 +591,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -630,6 +649,10 @@ video {
   width: 100%;
 }
 
+.table-fixed {
+  table-layout: fixed;
+}
+
 .list-inside {
   list-style-position: inside;
 }
@@ -672,6 +695,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-\[var\(--pageColor\)\] {
@@ -744,20 +771,12 @@ video {
   padding-right: 1rem;
 }
 
-.pl-3 {
-  padding-left: 0.75rem;
-}
-
 .text-center {
   text-align: center;
 }
 
 .text-start {
   text-align: start;
-}
-
-.indent-4 {
-  text-indent: 1rem;
 }
 
 .indent-8 {
@@ -813,12 +832,12 @@ video {
   font-weight: 300;
 }
 
-.font-thin {
-  font-weight: 100;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .text-primary-2 {
@@ -1157,6 +1176,11 @@ body {
   }
 }
 
+#REFRESHMENTSTABLE th,#REFRESHMENTSTABLE td{
+  border: 1px solid;
+  padding: 6px;
+}
+
 .hover\:text-primary-2:hover {
   color: var(--primary-2);
 }
@@ -1234,6 +1258,3 @@ body {
     padding-left: 1px;
   }
 }
-
-
-

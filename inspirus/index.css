@@ -293,3 +293,7 @@ opacity: 0;
 
 
 
+#REFRESHMENTSTABLE th,#REFRESHMENTSTABLE td{
+  border: 1px solid;
+  padding: 6px;
+}
