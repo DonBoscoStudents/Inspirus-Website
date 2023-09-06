@@ -554,6 +554,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -608,6 +612,10 @@ video {
 
 .w-\[min\(70\%\2c 40rem\)\] {
   width: min(70%,40rem);
+}
+
+.w-full {
+  width: 100%;
 }
 
 .list-inside {
@@ -708,6 +716,10 @@ video {
   padding-left: 1rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -745,6 +757,11 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -913,7 +930,8 @@ video {
   top: 0;
   left: 0;
   right: 0;
-  /* background: var(--primary-3); */
+  background: var(--primary-3);
+  background-image: url('/Assets/grain_dark.png');
   height: 60px;
   display: flex;
   align-items: center;
@@ -931,21 +949,11 @@ video {
       background: var(--primary-2);
     }
   }
-  & div{
+  & .pages{
     position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
-    & i{
-      right: 45px;
-      white-space: nowrap;
-      /* display: flex; */
-      position: absolute;
-      /* width: 20ch; */
-      /* user-select: none; */
-      font-weight: 100;
-      opacity: .8;
-    }
     & a{
       cursor: pointer;
       font-family: Noto Sans;
@@ -954,6 +962,19 @@ video {
       &:hover{
         color: var(--textColorHover);
       }
+    }
+  }
+  & .rightNavBarIConNQuote{
+    display: flex;
+    align-items: center;
+    position: relative;
+    & i{
+      /* top: 40px; */
+      right: 40px;
+      white-space: nowrap;
+      position: absolute;
+      font-weight: 100;
+      opacity: .1;
     }
   }
 }
@@ -1017,7 +1038,6 @@ body {
   cursor: pointer;
   aspect-ratio: 16/10;
   width: 20rem;
-  /* overflow: hidden; */
   padding: 1rem;
   position: relative;
   /* outline: rgba(128, 128, 128, 0.2) 1px solid; */

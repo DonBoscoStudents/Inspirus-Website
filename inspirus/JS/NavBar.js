@@ -5,11 +5,11 @@ NavBar.innerHTML=`
 <button onclick="history.back()"><span class="material-symbols-outlined">
 arrow_back
 </span></button>
-<div>
+<div class='pages'>
 <a href='/'>Home</a>
 <a href='/Pages/Team/' >Team</a>
 </div>
-<div>
+<div class="rightNavBarIConNQuote">
 <i id="Quotes">Inspirus 7</i>
 <button onclick="ChangeColorMode()"><span class="material-symbols-outlined">
 light_mode
@@ -19,9 +19,10 @@ light_mode
 
 const Quotes=[
   "GameJam or Mango Jam",
-  "Potatoes",
-  "0010110",
-  '𐊪𐋎𐊆𐊋𐋇𐊀𐋃𐊄𐋏'
+  "111",
+  '𐊪𐋎𐊆𐊋𐋇𐊀𐋃𐊄𐋏',
+  "7",
+  "0x7"
 ]
 
 NavBar.classList.add('nav')
