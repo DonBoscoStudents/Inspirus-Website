@@ -54,7 +54,7 @@ const Events = {
       'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLSc6MAnP41kFGPa42C40n_98g1tU8D-Nq3dulbiAiKmwJznNwg/viewform?usp=pp_url&entry.502293404=PlaceHolder+Team&entry.1569278638=Placeholder+Leader&entry.453206441=Placeholder+Phone+No&entry.507837025=Placeholder+Member&entry.1732181157=Placeholder+Phone+No&entry.1932562068=Placeholder+Institute'
     },
     "MemeOff": {
-      'Link': '',
+      'Link': 'https://forms.gle/J3hghgqs2LSUjTZ86',
       'preFilledLink': ''
     },
     "Cubix": {

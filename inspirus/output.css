@@ -534,6 +534,34 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.-right-10 {
+  right: -2.5rem;
+}
+
+.-right-32 {
+  right: -8rem;
+}
+
+.-right-48 {
+  right: -12rem;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -541,11 +569,6 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .mb-2 {
@@ -604,6 +627,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -620,8 +647,32 @@ video {
   height: 100vh;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-\[8rem\] {
+  height: 8rem;
+}
+
+.h-\[10rem\] {
+  height: 10rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-40 {
@@ -644,6 +695,30 @@ video {
   width: 100%;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-\[8rem\] {
+  width: 8rem;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
+}
+
 .table-fixed {
   table-layout: fixed;
 }
@@ -652,32 +727,12 @@ video {
   list-style-position: inside;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
-.list-\[upper-roman\] {
-  list-style-type: upper-roman;
-}
-
-.list-\[box\] {
-  list-style-type: box;
-}
-
-.list-\[diamond\] {
-  list-style-type: diamond;
-}
-
-.list-\[di\] {
-  list-style-type: di;
-}
-
-.list-none {
-  list-style-type: none;
-}
-
 .list-\[square\] {
   list-style-type: square;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-3 {
@@ -798,24 +853,12 @@ video {
   text-align: start;
 }
 
-.indent-8 {
-  text-indent: 2rem;
-}
-
-.indent-2 {
-  text-indent: 0.5rem;
-}
-
-.indent-10 {
-  text-indent: 2.5rem;
-}
-
 .indent-12 {
   text-indent: 3rem;
 }
 
-.indent-16 {
-  text-indent: 4rem;
+.indent-8 {
+  text-indent: 2rem;
 }
 
 .font-IBMPlexSerif {
@@ -855,16 +898,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-black {
   font-weight: 900;
 }
@@ -897,16 +930,16 @@ video {
   color: var(--textColor);
 }
 
-.text-textColorHover {
-  color: var(--textColorHover);
-}
-
 .underline {
   text-decoration-line: underline;
 }
 
-.opacity-40 {
-  opacity: 0.4;
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+.mix-blend-screen {
+  mix-blend-mode: screen;
 }
 
 .transition-opacity {
