@@ -42,8 +42,8 @@ const Events = {
       'preFilledLink': ''
     },
     "Masterclass": {
-      'Link': '',
-      'preFilledLink': ''
+      'Link': 'https://forms.gle/Eqoun3J3qU5KaWC39',
+      'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLSd9gn4BS8Zb6HruAFn9QD6-hg3Yr_WPZ1M0ff7n4fmKP_rXNA/viewform?usp=pp_url&entry.663367228=Rhyd&entry.793640995=Rhys123&entry.674812773=124334554&entry.1452594489=High+School&entry.801818381=Dbce'
     },
     "ReelitFeelit": {
       'Link': 'https://forms.gle/qx4ea5TN2KEJwiu59',

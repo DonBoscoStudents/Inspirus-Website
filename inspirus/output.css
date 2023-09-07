@@ -543,6 +543,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -810,6 +815,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -830,12 +840,28 @@ video {
   font-weight: 100;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-primary-2 {
   color: var(--primary-2);
 }
 
 .text-textColor {
   color: var(--textColor);
+}
+
+.text-textColorHover {
+  color: var(--textColorHover);
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .transition-opacity {
