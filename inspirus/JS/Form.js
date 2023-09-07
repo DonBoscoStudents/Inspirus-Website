@@ -31,10 +31,10 @@ const Events = {
     },
     "Inspirathon": {
       'Link': 'https://forms.gle/2NEQ4od3AxHyqc1Q9',
-      'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLScfw5ZoxnrbRF3kFMr7MlRE0vSAYWqXriZR42cVjxtaHRhYuA/viewform?usp=sf_link&entry.90078405=anonymous&entry.1416627958=don+bosco&entry.651354929=Ruchi&entry.209946133=ruchibokade10@gmail.com&entry.2024037941=1234&entry.1644702028=om&entry.652407655=abc@gmail.com&entry.1434348594=12345'
+      'preFilledLink': ''
     },
     "JigsawCoding": {
-      'Link': '',
+      'Link': 'https://forms.gle/ZSmKdWs5L1o3PtbF6',
       'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLScfw5ZoxnrbRF3kFMr7MlRE0vSAYWqXriZR42cVjxtaHRhYuA/viewform?usp=pp_url&entry.90078405=anonymous&entry.1416627958=don+bosco&entry.651354929=Ruchi&entry.209946133=ruchibokade10@gmail.com&entry.2024037941=1234&entry.1644702028=om&entry.652407655=abc@gmail.com&entry.1434348594=12345'
     },
     "LeisureLounge": {
