@@ -656,6 +656,30 @@ video {
   list-style-type: disc;
 }
 
+.list-\[upper-roman\] {
+  list-style-type: upper-roman;
+}
+
+.list-\[box\] {
+  list-style-type: box;
+}
+
+.list-\[diamond\] {
+  list-style-type: diamond;
+}
+
+.list-\[di\] {
+  list-style-type: di;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.list-\[square\] {
+  list-style-type: square;
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -778,6 +802,22 @@ video {
   text-indent: 2rem;
 }
 
+.indent-2 {
+  text-indent: 0.5rem;
+}
+
+.indent-10 {
+  text-indent: 2.5rem;
+}
+
+.indent-12 {
+  text-indent: 3rem;
+}
+
+.indent-16 {
+  text-indent: 4rem;
+}
+
 .font-IBMPlexSerif {
   font-family: IBMPlexSerif;
 }
@@ -818,6 +858,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-black {
