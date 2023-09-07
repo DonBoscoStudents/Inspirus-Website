@@ -14,7 +14,7 @@ const Events = {
       'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLScxDawoI4fwzXGg087us5J_kJ9QBuEwXL9oFMIlJtbWL_vEAQ/viewform?usp=pp_url&entry.132497433=Nfnfjfnf&entry.1173705088=Jfjfkgnfm&entry.1653233608=Jgfjksdmkd&entry.490783579=Jdjfjjd&entry.1711598934=Hdjdkdkfl&entry.1493341546=Mfmdlcl'
     },
     "ExplorersQuest": {
-      'Link': 'https://docs.google.com/forms/d/17zuqSPATceSASEKux7cCAMr1TBC6kPMHl638P53O6MU/edit',
+      'Link': 'https://forms.gle/DfwJt8Sm3iwNRoSi8',
       'preFilledLink': 'https://docs.google.com/forms/d/e/1FAIpQLSeIyy9jIGiOpu49d0PFzoZL6OsG8rZe3qKv3EfR1GSdP39teg/viewform?usp=pp_url&entry.166985802=Hack+and+Whack&entry.2055606284=Mark+Cardozo&entry.538222799=mastermind@gmail.com'
     },
     "Exquizite": {
