@@ -607,6 +607,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -645,14 +649,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .flex {
@@ -1048,25 +1044,25 @@ video {
 @font-face {
   font-family: "Minecraft";
 
-  src: url("public/Fonts/Minecraft.ttf");
+  src: url("/public/Fonts/Minecraft.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
 
-  src: url("public/Fonts/Rubik-VariableFont_wght.ttf");
+  src: url("/public/Fonts/Rubik-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "ElegantoSans";
 
-  src: url("public/Fonts/ElegantoSans-Thin.ttf");
+  src: url("/public/Fonts/ElegantoSans-Thin.ttf");
 }
 
 @font-face {
   font-family: "NotoSerif";
 
-  src: url("public/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
+  src: url("/public/Fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("ttf");
 }
 
 @font-face {
@@ -1074,7 +1070,7 @@ video {
 
   font-weight: 100;
 
-  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Thin.ttf") format("ttf");
+  src: url("/public/Fonts/IBM Plex Serif/IBMPlexSerif-Thin.ttf") format("ttf");
 }
 
 @font-face {
@@ -1082,7 +1078,7 @@ video {
 
   font-weight: 200;
 
-  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Light.ttf") format("ttf");
+  src: url("/public/Fonts/IBM Plex Serif/IBMPlexSerif-Light.ttf") format("ttf");
 }
 
 @font-face {
@@ -1090,7 +1086,7 @@ video {
 
   font-weight: 500;
 
-  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
+  src: url("/public/Fonts/IBM Plex Serif/IBMPlexSerif-Medium.ttf") format("ttf");
 }
 
 @font-face {
@@ -1098,7 +1094,7 @@ video {
 
   font-weight: 900;
 
-  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-Bold.ttf") format("ttf");
+  src: url("/public/Fonts/IBM Plex Serif/IBMPlexSerif-Bold.ttf") format("ttf");
 }
 
 @font-face {
@@ -1106,7 +1102,7 @@ video {
 
   font-weight: 600;
 
-  src: url("public/Fonts/IBM Plex Serif/IBMPlexSerif-SemiBold.ttf") format("ttf");
+  src: url("/public/Fonts/IBM Plex Serif/IBMPlexSerif-SemiBold.ttf") format("ttf");
 }
 
 @font-face {
@@ -1114,7 +1110,7 @@ video {
 
   font-weight: 200;
 
-  src: url("public/Fonts/Poppins/Poppins-Light.ttf") format("ttf");
+  src: url("/public/Fonts/Poppins/Poppins-Light.ttf") format("ttf");
 }
 
 @font-face {
@@ -1124,7 +1120,7 @@ video {
 
   font-weight: 100;
 
-  src: url("public/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
+  src: url("/public/Fonts/Noto Sans/NotoSans-Thin.ttf") format("ttf");
 }
 
 :root,
