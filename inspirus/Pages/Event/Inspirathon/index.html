@@ -33,14 +33,78 @@
 
     <!-- body section -->
     <div class="h-screen md:p-8 p-4">
-        <h1 class="font-IBMPlexSerif text-6xl font-black">Inspirathon</h1>
-        <p class="font-NotoSans font-thin md:w-[30rem]">
-            "Everybody has a creative potential and from the moment you can express this creative potential, you can start changing the world"
+        <h1 class="font-IBMPlexSerif text-6xl font-black z-10 relative">Inspirathon</h1>
+        <p class="font-NotoSans font-thin md:w-[30rem] z-10 relative bg-c1 ">
+           "Everybody has a creative potential and from the moment you can express this creative potential, you can start changing the world"
 -Paulo Coelho
-
 Bring your team and over 24-hours, you'll be tasked with developing a solution for our (currently secret👀) topics!
+The hackathon is for students of any level and background to get involved in! Yes we have prizes for our winners, but the aim of the event is to inspire, so get involved and give it a go!!
+</p>
+<style>
+    @media (max-width:400px) {
+        #IMG_1020{
+            width: 100%;
+            grid-column: span 2 / span 4;
+        }
+        .images{
+            margin-top: 1rem;
+            gap: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+& img{
+    position: relative;
+    transform: rotate(0);
+    top: auto;
+    right: auto;
+}
+        }
+       
+    }
+    @media (max-width:800px) and (min-width:400px) {
+   .images{
+    margin-top: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+        #IMG_1020{
+          position: relative;
+          transform: rotate(0);
+          top: auto;
+          right: auto;
+        }
+        #IMG_1263{ position: relative;
+            transform: rotate(0);
+        top: auto;
+    right: auto;}
+        #IMG_1268{ position: relative;
+            transform: rotate(0);
+        top: auto;
+    right: auto;}
+        #IMG_1266{ position: relative;
+            transform: rotate(0);
+        top: auto;
+    right: auto;}
+        #IMG_1036{ position: relative;
+            transform: rotate(0);
+        top: auto;
+    right: auto;} 
+    }
+  
+    .images img{
+        transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+</style>
+<div class="images z-0">
+        <img id="IMG_1020" class="w-64 absolute top-32 right-20 rotate-12 " src="/Assets/Inspirathon/IMG_1020-min.JPG" alt="">
+        <img id="IMG_1263" class="w-64 absolute top-40 right-80 -rotate-2" src="/Assets/Inspirathon/IMG_1263-min.JPG" alt="">
+        <img id="IMG_1268" class="w-64 absolute top-72 right-20 rotate-[15deg]" src="/Assets/Inspirathon/IMG_1268-min.JPG" alt="">
+        <img id="IMG_1266" class="w-64 absolute top-80 right-80 rotate-[-20deg]" src="/Assets/Inspirathon/IMG_1266-min.JPG" alt="">
+        <img id="IMG_1036" class="w-64 absolute top-[26rem] right-40 -rotate-2" src="/Assets/Inspirathon/IMG_1036-min.JPG" alt="">
+   
+</div>
 
-The hackathon is for students of any level and background to get involved in! Yes we have prizes for our winners, but the aim of the event is to inspire, so get involved and give it a go!!</p>
     </div>
     <!-- rolling text -->
     <section id="RollingText">
@@ -150,10 +214,68 @@ The hackathon is for students of any level and background to get involved in! Ye
                 </div>
             </div>
         </div>
-        <br>
 
     </div>
-
+    <style>
+        .problemCards{
+            background-image: url('/Assets/grain_dark.png');
+            width: 20rem;
+            aspect-ratio: 16/9;
+            background-color: var(--c4);
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 100;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .2s;
+& img{
+    transition: .4s;
+}
+        }
+        .problemCards:hover{ 
+            scale: 1.02;
+            & img{
+            opacity: 1;
+        }}
+    </style>
+    <div class="p-8 mt-8">
+        <h1 class="text-2xl font-black font-IBMPlexSerif">Past Problem Statements</h1>
+        <div class="flex gap-4 mt-2 flex-wrap">
+            <div class="problemCards w-80 bg-c4 p-3 rounded-md font-thin relative overflow-hidden">
+                <p>
+                    An all-in-one app for managing faculty-student data. Faculty can add marks, attendance, and more. It includes chat, notices, and submissions. Students can check marks, attendance, and receive reminders.
+                </p>
+                <img class="absolute inset-0 mix-blend-screen h-full w-full object-cover opacity-0 pointer-events-none select-none" src="/Assets/stars-slide.gif" alt="">
+            </div>
+            <div class="problemCards w-80 bg-c4 p-3 rounded-md font-thin relative overflow-hidden">
+                <p>
+                    Real-time translation from Hindi/English to sign language for the speech and hearing-impaired.
+                </p>
+                <img class="absolute inset-0 mix-blend-screen h-full w-full object-cover opacity-0 pointer-events-none select-none" src="/Assets/stars-slide.gif" alt="">
+            </div>
+            <div class="problemCards ">
+                <p>
+                    Take student attendance using face recognition from uploaded photographs.
+                </p>
+                <img class="absolute inset-0 mix-blend-screen h-full w-full object-cover opacity-0 pointer-events-none select-none" src="/Assets/stars-slide.gif" alt="">
+            </div>
+            <div class="problemCards w-80 bg-c4 p-3 rounded-md font-thin relative overflow-hidden">
+                <p>
+                    Create a web app to locate street merchants and hawkers in real-time. GPS tracking and online store creation for vendors.
+                </p>
+                <img class="absolute inset-0 mix-blend-screen h-full w-full object-cover opacity-0 pointer-events-none select-none" src="/Assets/stars-slide.gif" alt="">
+            </div>
+            <div class="problemCards w-80 bg-c4 p-3 rounded-md font-thin relative overflow-hidden">
+                <p>
+                    Help rural patients by allowing them to upload illness videos for remote doctor consultations.
+                </p>
+                <img class="absolute inset-0 mix-blend-screen h-full w-full object-cover opacity-0 pointer-events-none select-none" src="/Assets/stars-slide.gif" alt="">
+            </div>
+        </div>
+        
+        
+    </div>
 
 
 </body>

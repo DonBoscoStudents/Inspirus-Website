@@ -153,6 +153,7 @@
 }
 
 .footer{
+  padding: 1rem;
   background: var(--primary-2);
   height: 100vh;
   display: grid;
