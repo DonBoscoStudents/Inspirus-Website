@@ -1392,7 +1392,8 @@ body {
 .team_inner{
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: space-evenly;
 }
 
