@@ -1377,3 +1377,52 @@ body {
     padding-left: 1px;
   }
 }
+
+/* team_page */
+/* /////////////////////////////////////////////////////////////////////// */
+.team{
+  width: auto;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.team_inner{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.member{
+  width: auto;
+  margin: 0px;
+  width: 200px;
+}
+
+.member_name{
+  margin: 0px;
+  padding: 0px;
+}
+.member_title{
+  margin: 0px;
+  padding: 0px;
+}
+
+.member_img{
+  width: 200px;
+  height: 200px;
+  background-color: rgb(28, 30, 34);
+}
+
+.member_info{
+  background-color: white;
+  color: black;
+}
+
+.main_title{
+  color: white;
+  padding: 20px 0px;
+}
