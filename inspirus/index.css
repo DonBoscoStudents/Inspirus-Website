@@ -315,4 +315,5 @@ opacity: 0;
 }
 #Scene{
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
 }

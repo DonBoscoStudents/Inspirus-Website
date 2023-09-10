@@ -1397,6 +1397,7 @@ body {
 
 #Scene{
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
 }
 
 .hover\:text-primary-2:hover {
