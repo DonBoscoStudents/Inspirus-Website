@@ -598,19 +598,11 @@ video {
   top: 26rem;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-0 {
   z-index: 0;
 }
 
 .z-10 {
-  z-index: 10;
-}
-
-.z-\[10\] {
   z-index: 10;
 }
 
@@ -1401,6 +1393,10 @@ body {
 #REFRESHMENTSTABLE th,#REFRESHMENTSTABLE td{
   border: 1px solid;
   padding: 6px;
+}
+
+#Scene{
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
 }
 
 .hover\:text-primary-2:hover {
