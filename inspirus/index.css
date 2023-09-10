@@ -313,3 +313,86 @@ opacity: 0;
   border: 1px solid;
   padding: 6px;
 }
+
+/* team_page */
+/* /////////////////////////////////////////////////////////////////////// */
+.team{
+  width: auto;
+  /* color: black; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.personCard{
+  background: var(--primary-2);
+  cursor: default;
+  transition-duration:200ms;
+  & img{
+    transition-duration: 400ms;
+    scale: 100%;
+
+  }
+  &:hover{
+    scale: 105%;
+    & img{
+      scale: 108%;
+    }
+  }
+}
+
+/* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
+<img src="/Assets/Members/Rhys.jpg" alt="">
+<div class="p-2">
+  <h1 class="font-rubik font-bold">Rhys Rodrigues</h1>
+<a class="text-sm font-thin hover:text-textColorHover" href="https://wa.me/917588354003">Whatsapp Me</a>  
+</div>
+
+</div> */
+
+/* 
+.team_inner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.member{
+  width: auto;
+  margin: 0px;
+  width: 200px;
+}
+
+.member_name{
+  margin: 0px;
+  padding: 0px;
+}
+.member_title{
+  margin: 0px;
+  padding: 0px;
+}
+
+.member_img{
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(19, 19, 19);
+  border: 5px solid white;
+} */
+
+/* .member_info{
+  font-weight: 600;
+  color: white;
+} */
+
+/* .main_title{
+  font: "Rubik";
+  color: white;
+  padding: 20px 0px;
+  text-shadow: 0px 0px 5px white;
+  font-weight: 800;
+  font-size: 18px;
+} */
