@@ -1,511 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Team</title>
     <link rel="stylesheet" href="/output.css">
-  
+
     <script defer src="/JS/NavBar.js"></script>
     <script defer src="/JS/Footer.js"></script>
 </head>
+
 <body class="bg-primary text-textColor">
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Don Bosco College of Engineering</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="https://cdn.discordapp.com/attachments/1026865791557181550/1027547057751343114/kinley.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Fr. Kinley D'Cruz</h1>
-                    <p class="member_title">Chief Patron</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="https://cdn.discordapp.com/attachments/1026865791557181550/1027546608537186377/neena.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Dr. Neena Panandikar</h1>
-                    <p class="member_title">Patron</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/faculty/gaurang.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Dr. Gaurang S Patkar</h1>
-                    <p class="member_title">Convenor</p>
-                </div>
+    <section class="main min-h-screen flex flex-col items-center">
+        <div class="switcher mt-12  flex items-center justify-center ">
+            <div
+                class="bg-primary-2 rounded-full h-12 aspect-[40/10] grid grid-cols-2 place-items-center overflow-hidden">
+                <div id="faculty"
+                    class="hover:bg-textColorHover font-rubik duration-200 w-full h-full flex items-center justify-center cursor-pointer">
+                    Faculty</div>
+                <div id="students"
+                    class="hover:bg-textColorHover font-rubik duration-200 w-full h-full flex items-center justify-center cursor-pointer">
+                    Students</div>
             </div>
         </div>
-    </div>
-    <!-- SECTION_END -->
 
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Faculty Co-ordinators</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/amey_tilve.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Prof. Amey K. Shet Tilve</h1>
-                    <p class="member_title">Inspirus Co-ordinator</p>
+
+        <h1 class="font-rubik font-black text-2xl mt-8">Don Bosco College Of Engineering</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/kinley.jpg" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Fr. Kinley D'Cruz</h1>
+                    <h3 class="text-sm">Chief Patron</h3>
                 </div>
             </div>
-    
-            <div class="member">
-                <img src="/Assets/faculty/merwin.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Prof. Merwyn D'Souza</h1>
-                    <p class="member_title">C-CODES Co-ordinator</p>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/neena.jpeg" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Dr. Neena Panandikar</h1>
+                    <h3 class="text-sm">Patron</h3>
                 </div>
             </div>
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/gaurang.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Dr. Gaurang S Patkar</h1>
+                    <h3 class="text-sm">Convenor</h3>
+                </div>
+            </div>
+
         </div>
-    </div>
-    <!-- SECTION_END -->
 
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Framed</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/siya.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">siya__</h1>
-                    <p class="member_title">Faculty Coordinator</p>
+
+        <h1 class="font-rubik font-black text-2xl ">Faculty Coordinators</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/amey_tilve.png" alt="">
                 </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Nikhil Rao Coordinator.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Nikhil Rao</h1>
-                    <p class="member_title">Coordinator TE</p>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Prof. Amey K. Shet Tilve
+                    </h1>
+                    <h3 class="text-sm">Inspirus Co-ordinator</h3>
                 </div>
             </div>
 
-            <div class="member">
-                <img src="/Assets/Members/jason.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Jason Barreto</h1>
-                    <p class="member_title">Coordinator SE</p>
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/merwin.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Prof. Merwyn D'Souza</h1>
+                    <h3 class="text-sm">C-CODES Coordinator</h3>
                 </div>
             </div>
+      
         </div>
-    </div>
-    <!-- SECTION_END -->
 
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Incarnate</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/jog.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Dr. Vivek V. Jog</h1>
-                    <p class="member_title">Faculty Coordinator</p>
+
+        <h1 class="font-rubik font-black text-2xl ">Capture The Flag</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty" alt="">
                 </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Elton.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Elton Costa</h1>
-                    <p class="member_title">Coordinator TE</p>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Prof. Amey K. Shet Tilve
+                    </h1>
+                    <h3 class="text-sm">Inspirus Co-ordinator</h3>
                 </div>
             </div>
 
-            <div class="member">
-                <img src="/Assets/Members/Melrich moraes.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Melrich Moraes</h1>
-                    <p class="member_title">Coordinator SE</p>
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/merwin.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Prof. Merwyn D'Souza</h1>
+                    <h3 class="text-sm">C-CODES Coordinator</h3>
                 </div>
             </div>
+      
         </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Code Play</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/janvi.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Ms. Janhavi Naik</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Vishaka.JPG" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Vishaka__</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/__.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Jay Rane</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Reel it Feel it</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Dr. Amrita Naik</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Warren Rodrigues.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Warren Rodrigues</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Faizan__</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Code War</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/manisha.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Mrs. Manisha Fal Dessai</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Joseph Makkimane.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Joseph Makkimane</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/Pranav Kerkar.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Pranav Kerkar</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Retrieval Sages</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/norman.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Mr. Norman Dias</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Jonas Ferrao.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Jonas Ferrao</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Anuj Gawde</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Capture the Flag</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Dr. Amrita Naik</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Pranav.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Pranav Naik</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Sam</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Inspirathon</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/mithil.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Mr. Mithil Parab</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Rhys.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Rhys Josmin</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/Sonal Gaonkar.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Sonal Gaonkar</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">ExQuizite</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/Members/Eshan desai.jpeg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Eshan Desai</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/Eric Faleiro.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Eric Faleiro</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Leisure Lounge</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/janvi.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Ms. Janhavi Naik</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/Glory D'cruz Coordinator.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Glory D'cruz</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/Sidhi Rane.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Siddhi Rane</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Mind Games</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Christie__</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Preetam__</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">JigSaw Coding</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/christina.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Ms. Maria Christina Barretto</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Ruchi__</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Om parab</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START -->
-    <div class="team">
-        <h1 class="main_title">Rubik's Cube</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/faculty/merwin.png" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Mr. Merwyn D’Souza</h1>
-                    <p class="member_title">Faculty Coordinator</p>
-                </div>
-            </div>
-    
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Ruchi__</h1>
-                    <p class="member_title">Coordinator TE</p>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/Anish.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Anish__</h1>
-                    <p class="member_title">Coordinator SE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START_TEAMS-->
-    <div class="team">
-        <h1 class="main_title">Social Media Team</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/Members/Rhys.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Rhys Josmin</h1>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">__</h1>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">__</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
-
-    <!-- SECTION_START_TEAMS-->
-    <div class="team">
-        <h1 class="main_title">Web Design Team</h1>
-        <div class="team_inner">
-            <div class="member">
-                <img src="/Assets/Members/Rhys.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">Rhys Josmin</h1>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">__</h1>
-                </div>
-            </div>
-
-            <div class="member">
-                <img src="/Assets/Members/.jpg" alt="" class="member_img">
-                <div class="member_info">
-                    <h1 class="member_name">__</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SECTION_END -->
+    </section>
 
 </body>
+
 </html>
