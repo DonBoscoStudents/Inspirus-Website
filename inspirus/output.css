@@ -546,6 +546,10 @@ video {
   position: relative;
 }
 
+
+.-right-48 {
+  right: -12rem;
+
 .inset-0 {
   inset: 0px;
 }
@@ -596,6 +600,7 @@ video {
 
 .z-10 {
   z-index: 10;
+
 }
 
 .col-span-2 {
@@ -667,8 +672,13 @@ video {
   display: none;
 }
 
+
+.aspect-\[40\/10\] {
+  aspect-ratio: 40/10;
+
 .aspect-auto {
   aspect-ratio: auto;
+
 }
 
 .aspect-square {
@@ -711,6 +721,7 @@ video {
   width: 14rem;
 }
 
+
 .w-64 {
   width: 16rem;
 }
@@ -718,6 +729,7 @@ video {
 .w-80 {
   width: 20rem;
 }
+
 
 .w-\[10rem\] {
   width: 10rem;
@@ -733,6 +745,7 @@ video {
 
 .table-fixed {
   table-layout: fixed;
+
 }
 
 .-rotate-2 {
@@ -763,6 +776,11 @@ video {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .list-inside {
@@ -793,6 +811,14 @@ video {
   flex-wrap: wrap;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -809,12 +835,20 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -861,8 +895,27 @@ video {
   background-color: var(--primary);
 }
 
+.bg-primary-2 {
+  background-color: var(--primary-2);
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-textColor {
   background-color: var(--textColor);
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -898,6 +951,10 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
 }
 
 .pl-4 {
@@ -1015,6 +1072,7 @@ video {
   mix-blend-mode: multiply;
 }
 
+
 .mix-blend-screen {
   mix-blend-mode: screen;
 }
@@ -1027,6 +1085,7 @@ video {
   transition-duration: 150ms;
 }
 
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1035,6 +1094,10 @@ video {
 
 .duration-100 {
   transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 @font-face {
@@ -1373,6 +1436,94 @@ body {
 #REFRESHMENTSTABLE th,#REFRESHMENTSTABLE td{
   border: 1px solid;
   padding: 6px;
+}
+
+/* team_page */
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.team{
+  width: auto;
+  /* color: black; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.personCard{
+  background: var(--primary-2);
+  cursor: default;
+  transition-duration:200ms;
+  & img{
+    transition-duration: 400ms;
+    scale: 100%;
+  }
+  &:hover{
+    scale: 105%;
+    & img{
+      scale: 108%;
+    }
+  }
+}
+
+/* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
+<img src="/Assets/Members/Rhys.jpg" alt="">
+<div class="p-2">
+  <h1 class="font-rubik font-bold">Rhys Rodrigues</h1>
+<a class="text-sm font-thin hover:text-textColorHover" href="https://wa.me/917588354003">Whatsapp Me</a>  
+</div>
+
+</div> */
+
+/* 
+.team_inner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.member{
+  width: auto;
+  margin: 0px;
+  width: 200px;
+}
+
+.member_name{
+  margin: 0px;
+  padding: 0px;
+}
+.member_title{
+  margin: 0px;
+  padding: 0px;
+}
+
+.member_img{
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(19, 19, 19);
+  border: 5px solid white;
+} */
+
+/* .member_info{
+  font-weight: 600;
+  color: white;
+} */
+
+/* .main_title{
+  font: "Rubik";
+  color: white;
+  padding: 20px 0px;
+  text-shadow: 0px 0px 5px white;
+  font-weight: 800;
+  font-size: 18px;
+} */
+
+.hover\:bg-textColorHover:hover {
+  background-color: var(--textColorHover);
 }
 
 .hover\:text-primary-2:hover {
