@@ -8,26 +8,27 @@
     <link rel="stylesheet" href="/output.css">
 
     <script defer src="/JS/NavBar.js"></script>
+    <script defer src="/JS/SwitchViewTeam.js"></script>
     <script defer src="/JS/Footer.js"></script>
 </head>
 
 <body class="bg-primary text-textColor">
     <section class="main min-h-screen flex flex-col items-center">
-        <div class="switcher mt-12  flex items-center justify-center ">
+        <div class="switcher mt-12 mb-8 flex items-center justify-center ">
             <div
                 class="bg-primary-2 rounded-full h-12 aspect-[40/10] grid grid-cols-2 place-items-center overflow-hidden">
-                <div id="faculty"
+                <div id="FACULTY"
                     class="hover:bg-textColorHover font-rubik duration-200 w-full h-full flex items-center justify-center cursor-pointer">
                     Faculty</div>
-                <div id="students"
+                <div id="STUDENT"
                     class="hover:bg-textColorHover font-rubik duration-200 w-full h-full flex items-center justify-center cursor-pointer">
                     Students</div>
             </div>
         </div>
 
 
-        <h1 class="font-rubik font-black text-2xl mt-8">Don Bosco College Of Engineering</h1>
-        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+        <h1 class="font-rubik font-black text-2xl faculty">Don Bosco College Of Engineering</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24 faculty">
             
             <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
                 <div class="overflow-hidden w-full aspect-square bg-slate-300">
@@ -62,8 +63,8 @@
         </div>
 
 
-        <h1 class="font-rubik font-black text-2xl ">Faculty Coordinators</h1>
-        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+        <h1 class="font-rubik font-black text-2xl faculty">Faculty Coordinators</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24 faculty">
             
             <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
                 <div class="overflow-hidden w-full aspect-square bg-slate-300">
@@ -94,26 +95,377 @@
             
             <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
                 <div class="overflow-hidden w-full aspect-square bg-slate-300">
-                    <img src="/Assets/Faculty" alt="">
+                    <img src="/Assets" alt="">
                 </div>
                 <div class="p-2">
-                  <h1 class="font-rubik font-bold">Prof. Amey K. Shet Tilve
+                  <h1 class="font-rubik font-bold">
                     </h1>
-                    <h3 class="text-sm">Inspirus Co-ordinator</h3>
+                    <h3 class="text-sm"></h3>
                 </div>
             </div>
 
             <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
                 <div class="overflow-hidden w-full aspect-square bg-slate-300">
-                    <img src="/Assets/Faculty/merwin.png" alt="">
+                    <img src="/Assets" alt="">
                 </div>
                 <div class="p-2">
-                  <h1 class="font-rubik font-bold">Prof. Merwyn D'Souza</h1>
-                    <h3 class="text-sm">C-CODES Coordinator</h3>
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
                 </div>
             </div>
       
         </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Codeplay</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Codewars</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Explorers Quest</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Exquizite</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Framed</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Incarnate</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Inspirathon</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Faculty/mithil.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Prof. Mithil Parab
+                    </h1>
+                    <h3 class="text-sm">Professor Incharge</h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg student">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Members/Rhys.jpg" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Rhys Rodrigues
+                    </h1>
+                    <h3 class="text-sm">Leader</h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg student">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets/Members/Sonal Gaonkar.jpg" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">Sonal Gaonkar</h1>
+                    <h3 class="text-sm">Leader</h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Jigsaw Coding</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Leisure Lounge</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Masterclass</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Meme Off</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Reel It Feel It</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+        <h1 class="font-rubik font-black text-2xl ">Retrieval Sages</h1>
+        <div class="lg:w-[60%] mt-4 flex flex-wrap justify-center gap-6 pb-24">
+            
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold">
+                    </h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+
+            <div class="personCard w-40 h-auto overflow-hidden rounded-lg faculty">
+                <div class="overflow-hidden w-full aspect-square bg-slate-300">
+                    <img src="/Assets" alt="">
+                </div>
+                <div class="p-2">
+                  <h1 class="font-rubik font-bold"></h1>
+                    <h3 class="text-sm"></h3>
+                </div>
+            </div>
+      
+        </div>
+
+
     </section>
 
 </body>

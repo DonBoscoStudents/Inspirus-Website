@@ -5,10 +5,10 @@ Footer.innerHTML=`<div class="relative">
 <h1 class="font-black font-rubik text-3xl mb-2">Our Sponsors</h1>
 <div class="grid grid-cols-2 gap-2  pr-2">
   <a href="https://oneshield.com/"><img class="h-full p-3 aspect-auto"
-      src="/Assets/Sponsors/OneShield.svg" alt=""></a>
+      src="/Assets/Sponsors/OneShield2.svg" alt=""></a>
 
   <a href="https://www.tersusenergy.io/">
-    <img class="h-full p-3" src="/Assets/Sponsors/Tersus.svg" alt="">
+    <img class="h-full p-3" style='filter:drop-shadow(2px 1px 2px #04040488);' src="/Assets/Sponsors/Tersus.svg" alt="">
 
   </a>
 </div>
