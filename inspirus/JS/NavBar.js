@@ -63,17 +63,16 @@ window.onload=SetColorMode
     }
   }
   function ChangeColorMode(){
+    // ChangePlanet()
     isDarkMode=!isDarkMode
     document.body.classList.toggle('dark')
     document.body.classList.toggle('light')
     if(isDarkMode){
       window.localStorage.setItem('color-scheme','dark')
       document.getElementById('ColorModeICON').innerHTML=LightMode
-        console.log(window.localStorage)
     }else{
       window.localStorage.setItem('color-scheme','light')
       document.getElementById('ColorModeICON').innerHTML=DarkMode
-      console.log(window.localStorage)
 
     }
   }
