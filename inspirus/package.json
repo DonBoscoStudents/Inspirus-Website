@@ -4,12 +4,16 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "",
+    "dev": "npx vite",
     "tail": "npx tailwindcss -i index.css -o output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "three": "^0.156.1"
   }
 }

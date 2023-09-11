@@ -651,6 +651,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -687,6 +691,10 @@ video {
   height: 10rem;
 }
 
+.h-\[90\%\] {
+  height: 90%;
+}
+
 .h-auto {
   height: auto;
 }
@@ -697,6 +705,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .min-h-screen {
@@ -731,8 +747,24 @@ video {
   width: 70%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[90\] {
+  width: 90;
 }
 
 .table-fixed {
@@ -849,6 +881,10 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -894,8 +930,28 @@ video {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
 .bg-textColor {
   background-color: var(--textColor);
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 9 11 / var(--tw-bg-opacity));
+}
+
+.bg-rose-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -1442,6 +1498,32 @@ body {
     & img{
       scale: 108%;
     }
+  }
+}
+
+.ONLYFACULTY{
+  & .faculty{
+    &.flex{
+      display:flex;
+    }
+    display: block;
+  }
+  & .student{
+    display: none;
+    opacity: 0;
+  }
+}
+
+.ONLYSTUDENTS{
+  & .student{
+    &.flex{
+      display:flex;
+    }
+    display: block;
+  }
+  & .faculty{
+    display: none;
+    opacity: 0;
   }
 }
 

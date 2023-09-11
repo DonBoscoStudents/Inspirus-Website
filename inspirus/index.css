@@ -342,6 +342,33 @@ opacity: 0;
   }
 }
 
+.ONLYFACULTY{
+  & .faculty{
+    &.flex{
+      display:flex;
+
+    }
+    display: block;
+  }
+  & .student{
+    display: none;
+    opacity: 0;
+  }
+}
+.ONLYSTUDENTS{
+  & .student{
+    &.flex{
+      display:flex;
+
+    }
+    display: block;
+  }
+  & .faculty{
+    display: none;
+    opacity: 0;
+  }
+}
+
 /* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
 <img src="/Assets/Members/Rhys.jpg" alt="">
 <div class="p-2">
