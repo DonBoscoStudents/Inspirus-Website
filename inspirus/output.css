@@ -550,8 +550,8 @@ video {
   inset: 0px;
 }
 
-.-right-48 {
-  right: -12rem;
+.-right-0 {
+  right: -0px;
 }
 
 .bottom-2 {
@@ -588,6 +588,14 @@ video {
 
 .top-\[26rem\] {
   top: 26rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.-right-20 {
+  right: -5rem;
 }
 
 .z-0 {
@@ -655,6 +663,10 @@ video {
   margin-top: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -683,6 +695,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -707,16 +723,12 @@ video {
   height: 100vh;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .w-40 {
@@ -755,16 +767,8 @@ video {
   width: 100%;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
 .w-screen {
   width: 100vw;
-}
-
-.w-\[90\] {
-  width: 90;
 }
 
 .table-fixed {
@@ -881,10 +885,6 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded-none {
-  border-radius: 0px;
-}
-
 .border {
   border-width: 1px;
 }
@@ -925,18 +925,14 @@ video {
   background-color: var(--primary-2);
 }
 
+.bg-rose-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-textColor {
-  background-color: var(--textColor);
 }
 
 .bg-slate-800 {
@@ -944,14 +940,13 @@ video {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+.bg-textColor {
+  background-color: var(--textColor);
+}
+
 .bg-zinc-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity));
-}
-
-.bg-rose-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -1612,6 +1607,14 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:-right-48 {
+    right: -12rem;
+  }
+
   .md\:mb-auto {
     margin-bottom: auto;
   }
