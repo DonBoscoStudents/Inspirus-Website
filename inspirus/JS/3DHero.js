@@ -23,7 +23,7 @@ const PlanetDiffuse= new THREE.TextureLoader().load('public/Textures/8d12c1eb21e
 const sunMap= new THREE.TextureLoader().load('public/Textures/2k_sun.jpg')
 
 
-const geometry = new THREE.SphereGeometry( 8, 512, 512 );
+const geometry = new THREE.SphereGeometry( 8, 32, 32 );
 const material = new THREE.MeshPhysicalMaterial({map:PlanetDiffuse,displacementMap:PlanetDiffuse,displacementScale:.15});
 
 const sun = new THREE.MeshPhysicalMaterial({map:sunMap,emissiveMap:sunMap,emissiveIntensity:1,emissive:0xffffff});
@@ -37,7 +37,7 @@ setResponsiveMaterial()
 document.getElementById('ColorModeICON').addEventListener('click',setResponsiveMaterial)
 
 function setResponsiveMaterial(){
-  if(localStorage.getItem('color-scheme')=='light'){
+  if(localStorage.getItem('color-scheme')=='dark'){
     SunIntensity=0
     // planet.material.emissiveIntensity=1
     planet.material=sun;
@@ -49,8 +49,8 @@ function setResponsiveMaterial(){
 }
 
 
-const light = new THREE.PointLight(0xFFFFFF, 10000000)
-light.decay=3.8
+const light = new THREE.PointLight(0xFFFFFF, 100000000)
+light.decay=3.9
 light.position.set(-100,60,-100)
 
 scene.add(light)
@@ -114,11 +114,13 @@ controls.update();
 
 function animate() {
     requestAnimationFrame( animate );
-    i+=.0005
+    // i+=.0005
+    i+=.002
     SunIntensity+=.091
     // planet.setRotationFromAxisAngle(new THREE.Vector3(.5,1,0),i)
-    
-    if(localStorage.getItem('color-scheme')=='light'){
+    planet.rotation.x=i*.04
+    planet.rotation.y=i*1
+    if(localStorage.getItem('color-scheme')=='dark'){
       planet.material.emissiveIntensity=Ease(SunIntensity,2)*2
       composer.render();
     }else{
