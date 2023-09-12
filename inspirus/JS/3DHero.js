@@ -17,6 +17,7 @@ const camera = new THREE.PerspectiveCamera( 32, window.innerWidth / SceneHeight,
 
 const renderer = new THREE.WebGLRenderer({alpha:true});
 renderer.setSize( window.innerWidth,SceneHeight );
+renderer.toneMapping=THREE.ACESFilmicToneMapping
 document.getElementById('Scene').appendChild( renderer.domElement );
 
 const PlanetDiffuse= new THREE.TextureLoader().load('public/Textures/8d12c1eb21eb70291bb884ae4f8984dc.png')
@@ -59,6 +60,8 @@ scene.add(light)
 const Ambient = new THREE.AmbientLight(0x020d2d, 1)
 scene.add(Ambient)
 camera.position.z = 5;
+
+camera.position.x=30
 
 
 const renderScene = new RenderPass( scene, camera );
@@ -118,7 +121,6 @@ function animate() {
     // i+=.0005
     i+=.002
     SunIntensity+=.091
-    // planet.setRotationFromAxisAngle(new THREE.Vector3(.5,1,0),i)
     planet.rotation.x=i*.04
     planet.rotation.y=i*1
     if(localStorage.getItem('color-scheme')!='light'){

@@ -743,6 +743,10 @@ video {
   width: 20rem;
 }
 
+.w-\[100vw\] {
+  width: 100vw;
+}
+
 .w-\[10rem\] {
   width: 10rem;
 }
@@ -1457,8 +1461,8 @@ body {
 }
 
 #Scene{
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
-  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
 }
 
 /* team_page */
