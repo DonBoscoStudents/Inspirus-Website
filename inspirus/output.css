@@ -550,10 +550,6 @@ video {
   inset: 0px;
 }
 
-.-right-0 {
-  right: -0px;
-}
-
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -588,14 +584,6 @@ video {
 
 .top-\[26rem\] {
   top: 26rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.-right-20 {
-  right: -5rem;
 }
 
 .z-0 {
@@ -659,14 +647,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
 .flex {
   display: flex;
 }
@@ -707,6 +687,10 @@ video {
   height: 10rem;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
 .h-\[90\%\] {
   height: 90%;
 }
@@ -721,6 +705,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-\[95vh\] {
+  height: 95vh;
 }
 
 .min-h-screen {
@@ -767,8 +759,8 @@ video {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
+.w-10 {
+  width: 2.5rem;
 }
 
 .table-fixed {
@@ -933,11 +925,6 @@ video {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-textColor {
@@ -1105,6 +1092,14 @@ video {
 
 .mix-blend-screen {
   mix-blend-mode: screen;
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.outline-primary-2 {
+  outline-color: var(--primary-2);
 }
 
 .transition {
