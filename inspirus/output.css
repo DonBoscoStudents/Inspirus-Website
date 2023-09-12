@@ -586,12 +586,24 @@ video {
   top: 26rem;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-\[100\] {
+  z-index: 100;
 }
 
 .col-span-2 {
@@ -703,6 +715,10 @@ video {
   height: 100vh;
 }
 
+.h-\[200vh\] {
+  height: 200vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -737,6 +753,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .table-fixed {
@@ -1436,6 +1456,13 @@ body {
   padding: 6px;
 }
 
+
+#Scene{
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
+
+
 /* team_page */
 
 /* /////////////////////////////////////////////////////////////////////// */
@@ -1545,6 +1572,7 @@ body {
   font-weight: 800;
   font-size: 18px;
 } */
+
 
 .hover\:bg-textColorHover:hover {
   background-color: var(--textColorHover);
