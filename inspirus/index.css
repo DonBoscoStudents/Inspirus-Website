@@ -141,6 +141,8 @@
   }
   
 }
+
+
 #hero{
   height: auto;
 }
@@ -176,6 +178,10 @@
 body {
   background-image: url('./Assets/grain_dark.png');
   margin-top: 60px;
+}
+
+body:has(.LockedScene){
+  margin-top: 0;
 }
 
 #RollingText {
@@ -369,6 +375,15 @@ opacity: 0;
   }
 }
 
+.LockedScene{
+  margin-top: 5vh;
+  /* position: relative; */
+  z-index: 10000;
+border-radius: 0;
+ width: 100vw;
+ height: 100vh;
+
+}
 /* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
 <img src="/Assets/Members/Rhys.jpg" alt="">
 <div class="p-2">
