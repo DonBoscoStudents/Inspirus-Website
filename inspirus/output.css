@@ -550,10 +550,6 @@ video {
   inset: 0px;
 }
 
-.-right-48 {
-  right: -12rem;
-}
-
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -699,6 +695,14 @@ video {
   height: 10rem;
 }
 
+.h-\[70vh\] {
+  height: 70vh;
+}
+
+.h-\[95vh\] {
+  height: 95vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -835,6 +839,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-2 {
@@ -986,6 +994,10 @@ video {
 }
 
 .font-NotoSans {
+  font-family: Rubik;
+}
+
+.font-NotoSerif {
   font-family: Rubik;
 }
 
@@ -1303,6 +1315,14 @@ body {
      -moz-user-select: none;
           user-select: none;
   overflow: hidden;
+  & img{
+    height: 100%;
+    width: auto;
+    /* aspect-ratio: 14/9; */
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
 }
 
 #RollingText h1 {
@@ -1311,7 +1331,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  animation: 80s T1Ani linear 0s infinite;
+  animation: 200s T1Ani linear 0s infinite;
 }
 
 #RollingText h2 {
@@ -1320,7 +1340,7 @@ body {
   font-weight: 100;
   font-size: 100px;
   line-height: 90%;
-  animation: 90s T1Ani linear 0s infinite;
+  animation: 140s linear  infinite T2Ani;
 }
 
 @media (min-width:1000px) {
@@ -1330,7 +1350,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 80%;
-    animation: 80s T1Ani linear 0s infinite;
+    animation: 200s T1Ani linear 0s infinite;
   }
 
   #RollingText h2 {
@@ -1348,7 +1368,7 @@ body {
   }
 
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 
@@ -1358,7 +1378,7 @@ body {
   }
 
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 
@@ -1436,10 +1456,123 @@ body {
   padding: 6px;
 }
 
+
 #Scene{
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
   mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
 }
+
+
+/* team_page */
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.team{
+  width: auto;
+  /* color: black; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.personCard{
+  background: var(--primary-2);
+  cursor: default;
+  transition-duration:200ms;
+  & img{
+    transition-duration: 400ms;
+    scale: 100%;
+  }
+  &:hover{
+    scale: 105%;
+    & img{
+      scale: 108%;
+    }
+  }
+}
+
+.ONLYFACULTY{
+  & .faculty{
+    &.flex{
+      display:flex;
+    }
+    display: block;
+  }
+  & .student{
+    display: none;
+    opacity: 0;
+  }
+}
+
+.ONLYSTUDENTS{
+  & .student{
+    &.flex{
+      display:flex;
+    }
+    display: block;
+  }
+  & .faculty{
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
+<img src="/Assets/Members/Rhys.jpg" alt="">
+<div class="p-2">
+  <h1 class="font-rubik font-bold">Rhys Rodrigues</h1>
+<a class="text-sm font-thin hover:text-textColorHover" href="https://wa.me/917588354003">Whatsapp Me</a>  
+</div>
+
+</div> */
+
+/* 
+.team_inner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.member{
+  width: auto;
+  margin: 0px;
+  width: 200px;
+}
+
+.member_name{
+  margin: 0px;
+  padding: 0px;
+}
+.member_title{
+  margin: 0px;
+  padding: 0px;
+}
+
+.member_img{
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(19, 19, 19);
+  border: 5px solid white;
+} */
+
+/* .member_info{
+  font-weight: 600;
+  color: white;
+} */
+
+/* .main_title{
+  font: "Rubik";
+  color: white;
+  padding: 20px 0px;
+  text-shadow: 0px 0px 5px white;
+  font-weight: 800;
+  font-size: 18px;
+} */
+
 
 .hover\:bg-textColorHover:hover {
   background-color: var(--textColorHover);
@@ -1471,6 +1604,14 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:-right-48 {
+    right: -12rem;
+  }
+
   .md\:mb-auto {
     margin-bottom: auto;
   }
