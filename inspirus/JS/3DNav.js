@@ -7,7 +7,7 @@ let moveForward = false;
 let moveBackward = false;
 let moveLeft = false;
 let moveRight = false;
-let canJump = false;
+let canJump = true;
 
 let prevTime = performance.now();
 const velocity = new THREE.Vector3();
@@ -110,7 +110,9 @@ const onKeyDown = function (event) {
       break;
 
     case "Space":
-      if (canJump === true) velocity.y += 350;
+      velocity.y += 350
+      // if (canJump === true) {
+      // };
       canJump = false;
       break;
   }
@@ -138,6 +140,13 @@ const onKeyUp = function ( event ) {
     case 'ArrowRight':
     case 'KeyD':
       moveRight = false;
+      break;
+
+    case "Space":
+      // if (canJump === true) {
+        velocity.y =-300
+      // };
+      // canJump = false;
       break;
 
   }
