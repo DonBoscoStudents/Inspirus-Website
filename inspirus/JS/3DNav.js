@@ -87,7 +87,7 @@ const onKeyDown = function (event) {
       // controls.moveForward(1)
       moveForward = true;
       break;
-
+// 
     case "ArrowLeft":
     case "KeyA":
       // controls.moveRight(-1)
