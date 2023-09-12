@@ -116,7 +116,7 @@ function animate() {
     requestAnimationFrame( animate );
     i+=.0005
     SunIntensity+=.091
-    planet.setRotationFromAxisAngle(new THREE.Vector3(.5,1,0),i)
+    // planet.setRotationFromAxisAngle(new THREE.Vector3(.5,1,0),i)
     
     if(localStorage.getItem('color-scheme')=='light'){
       planet.material.emissiveIntensity=Ease(SunIntensity,2)*2

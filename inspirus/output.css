@@ -554,6 +554,10 @@ video {
   bottom: 0.5rem;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-20 {
   right: 5rem;
 }
@@ -564,6 +568,10 @@ video {
 
 .right-80 {
   right: 20rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-32 {
@@ -584,14 +592,6 @@ video {
 
 .top-\[26rem\] {
   top: 26rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .z-0 {
@@ -695,6 +695,10 @@ video {
   height: 10rem;
 }
 
+.h-\[200vh\] {
+  height: 200vh;
+}
+
 .h-\[70vh\] {
   height: 70vh;
 }
@@ -713,10 +717,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[200vh\] {
-  height: 200vh;
 }
 
 .min-h-screen {
@@ -1456,12 +1456,10 @@ body {
   padding: 6px;
 }
 
-
 #Scene{
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
   mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
 }
-
 
 /* team_page */
 
@@ -1573,7 +1571,6 @@ body {
   font-size: 18px;
 } */
 
-
 .hover\:bg-textColorHover:hover {
   background-color: var(--textColorHover);
 }
@@ -1667,3 +1664,4 @@ body {
     padding-left: 1px;
   }
 }
+
