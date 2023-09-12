@@ -743,10 +743,6 @@ video {
   width: 24rem;
 }
 
-.w-\[100\%\] {
-  width: 100%;
-}
-
 .w-\[10rem\] {
   width: 10rem;
 }
@@ -755,12 +751,12 @@ video {
   width: 70%;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .table-fixed {
