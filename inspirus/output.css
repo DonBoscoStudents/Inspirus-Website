@@ -683,6 +683,10 @@ video {
   height: 10rem;
 }
 
+.h-\[70vh\] {
+  height: 70vh;
+}
+
 .h-\[95vh\] {
   height: 95vh;
 }
@@ -697,10 +701,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .min-h-screen {
@@ -819,6 +819,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-2 {
@@ -973,11 +977,11 @@ video {
   font-family: Rubik;
 }
 
-.font-rubik {
+.font-NotoSerif {
   font-family: Rubik;
 }
 
-.font-NotoSerif {
+.font-rubik {
   font-family: Rubik;
 }
 
@@ -1014,11 +1018,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-black {
@@ -1296,6 +1295,14 @@ body {
      -moz-user-select: none;
           user-select: none;
   overflow: hidden;
+  & img{
+    height: 100%;
+    width: auto;
+    /* aspect-ratio: 14/9; */
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
 }
 
 #RollingText h1 {
@@ -1304,7 +1311,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  animation: 80s T1Ani linear 0s infinite;
+  animation: 200s T1Ani linear 0s infinite;
 }
 
 #RollingText h2 {
@@ -1313,7 +1320,7 @@ body {
   font-weight: 100;
   font-size: 100px;
   line-height: 90%;
-  animation: 90s T1Ani linear 0s infinite;
+  animation: 140s linear  infinite T2Ani;
 }
 
 @media (min-width:1000px) {
@@ -1323,7 +1330,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 80%;
-    animation: 80s T1Ani linear 0s infinite;
+    animation: 200s T1Ani linear 0s infinite;
   }
 
   #RollingText h2 {
@@ -1341,7 +1348,7 @@ body {
   }
 
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 
@@ -1351,7 +1358,7 @@ body {
   }
 
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 

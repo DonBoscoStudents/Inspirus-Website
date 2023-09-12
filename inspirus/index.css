@@ -179,9 +179,16 @@ body {
 }
 
 #RollingText {
+
   user-select: none;
   overflow: hidden;
-}
+  & img{
+    height: 100%;
+    width: auto;
+/* aspect-ratio: 14/9; */
+object-fit: cover;
+border-radius: 30px;
+}}
 #RollingText h1 {
 
   font-family: Noto Serif;
@@ -189,7 +196,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  animation: 80s T1Ani linear 0s infinite;
+  animation: 200s T1Ani linear 0s infinite;
 }
 #RollingText h2 {
   font-family: Eleganto Sans;
@@ -197,7 +204,7 @@ body {
   font-weight: 100;
   font-size: 100px;
   line-height: 90%;
-  animation: 90s T1Ani linear 0s infinite;
+  animation: 140s linear  infinite T2Ani;
 }
 
 @media (min-width:1000px) {
@@ -207,7 +214,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 80%;
-    animation: 80s T1Ani linear 0s infinite;
+    animation: 200s T1Ani linear 0s infinite;
   }
   #RollingText h2 {
     font-family: Eleganto Sans;
@@ -225,7 +232,7 @@ body {
     translate: 0ch 0;
   }
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 @keyframes T2Ani {
@@ -233,7 +240,7 @@ body {
     translate: 0ch 0;
   }
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 
