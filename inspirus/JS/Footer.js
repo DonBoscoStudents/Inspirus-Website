@@ -11,6 +11,10 @@ Footer.innerHTML=`<div class="relative">
     <img class="h-full p-3" style='filter:drop-shadow(2px 1px 2px #04040488);' src="/Assets/Sponsors/Tersus.svg" alt="">
 
   </a>
+  <a href="https://conexaotechsolutions.com/">
+    <img class="h-full p-3"  src="/Assets/Sponsors/Conexao.jpg" alt="">
+
+  </a>
 </div>
 <div class="absolute bottom-2 font-thin">
   <a href="https://www.instagram.com/inspirusdbce/">Instagram</a>
