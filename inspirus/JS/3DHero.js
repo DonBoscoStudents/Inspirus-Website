@@ -27,7 +27,7 @@ const geometry = new THREE.SphereGeometry( 8, 32, 32 );
 const material = new THREE.MeshPhysicalMaterial({map:PlanetDiffuse,displacementMap:PlanetDiffuse,displacementScale:.15});
 
 const sun = new THREE.MeshPhysicalMaterial({map:sunMap,emissiveMap:sunMap,emissiveIntensity:1,emissive:0xffffff});
-const planet = new THREE.Mesh( geometry, material );
+const planet = new THREE.Mesh( geometry, sun );
 
 planet.position.set(10,3,-35)
 scene.add( planet );
@@ -38,13 +38,14 @@ document.getElementById('ColorModeICON').addEventListener('click',setResponsiveM
 
 function setResponsiveMaterial(){
   if(localStorage.getItem('color-scheme')=='dark'){
+    planet.material=material;
+    document.getElementById('Scene').style.mixBlendMode='normal'
+
+  }else if(localStorage.getItem('color-scheme')=='light'){
     SunIntensity=0
     // planet.material.emissiveIntensity=1
     planet.material=sun;
     document.getElementById('Scene').style.mixBlendMode='screen'
-  }else{
-    planet.material=material;
-    document.getElementById('Scene').style.mixBlendMode='normal'
   }
 }
 
@@ -120,7 +121,7 @@ function animate() {
     // planet.setRotationFromAxisAngle(new THREE.Vector3(.5,1,0),i)
     planet.rotation.x=i*.04
     planet.rotation.y=i*1
-    if(localStorage.getItem('color-scheme')=='dark'){
+    if(localStorage.getItem('color-scheme')!='light'){
       planet.material.emissiveIntensity=Ease(SunIntensity,2)*2
       composer.render();
     }else{
