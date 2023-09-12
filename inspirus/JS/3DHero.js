@@ -37,15 +37,15 @@ setResponsiveMaterial()
 document.getElementById('ColorModeICON').addEventListener('click',setResponsiveMaterial)
 
 function setResponsiveMaterial(){
-  if(localStorage.getItem('color-scheme')=='dark'){
-    planet.material=material;
-    document.getElementById('Scene').style.mixBlendMode='normal'
-
-  }else if(localStorage.getItem('color-scheme')=='light'){
+  if(localStorage.getItem('color-scheme')!='light'){
     SunIntensity=0
-    // planet.material.emissiveIntensity=1
     planet.material=sun;
     document.getElementById('Scene').style.mixBlendMode='screen'
+
+  }else{
+    planet.material=material;
+    document.getElementById('Scene').style.mixBlendMode='normal'
+  
   }
 }
 
