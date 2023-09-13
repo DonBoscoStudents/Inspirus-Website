@@ -33,6 +33,15 @@ function init() {
     1,
     1000
   );
+
+  const armGeo =new THREE.BoxGeometry(1.2,1.2,7)
+  const armMaterial=new THREE.MeshPhysicalMaterial({roughness:0.2,metalness:1})
+  const arm = new THREE.Mesh(armGeo,armMaterial)
+
+  arm.position.set(2,-3.2,-2)
+  arm.rotation.set(1,3.5,0)
+  camera.add(arm)
+    console.log(arm)
   camera.position.y = 10;
 
   scene = new THREE.Scene();
@@ -42,6 +51,27 @@ function init() {
 	  texture.mapping = THREE.EquirectangularReflectionMapping;
 	  texture.colorSpace = THREE.SRGBColorSpace;
 	  scene.background = texture;
+    armMaterial.envMap=texture;
+	}
+  );
+
+ const armTexture =new THREE.TextureLoader(loadingManager).load(
+	"/Public/Texture/Arm.png",
+	() => {
+
+	  texture.colorSpace = THREE.SRGBColorSpace;
+
+    armMaterial.map=armTexture;
+	}
+  );
+
+ const armNoiseTexture =new THREE.TextureLoader(loadingManager).load(
+	"/Public/Texture/Noise.jpg",
+	() => {
+
+	  texture.colorSpace = THREE.SRGBColorSpace;
+
+    armMaterial.roughnessMap=armNoiseTexture;
 	}
   );
   scene.fog = new THREE.Fog(0xffffff, 0, 750);
@@ -138,11 +168,12 @@ function init() {
 
 
   var Loader = new GLTFLoader(loadingManager);
-  Loader.load("/Public/Models/4.glb", function (gltf) {
+  Loader.load("/Public/Models/Mesh.gltf", function (gltf) {
     scene.add(gltf.scene);
 	gltf.scene.scale.set(12,12,12)
-	for(const object in gltf.scene.children){
-    const Mesh=gltf.scene.children[object]
+	for(const object in gltf.scene.children[0].children){
+    const Mesh=gltf.scene.children[0].children[object]
+
 		objects.push(Mesh)
 
 	}
@@ -192,7 +223,7 @@ function animate() {
     raycaster.ray.origin.y -= 10;
 
     const intersections = raycaster.intersectObjects(objects, false);
-
+    // console.log(intersections)
     const onObject = intersections.length > 0;
 
     const delta = (time - prevTime) / 1000;
@@ -200,7 +231,7 @@ function animate() {
     velocity.x -= velocity.x * speed * delta;
     velocity.z -= velocity.z * speed * delta;
 
-    velocity.y -= 9.8 * 100.0 * delta; // 100.0 = mass
+    velocity.y -= 9.8 * 200.0 * delta; // 100.0 = mass
 
     direction.z = Number(moveForward) - Number(moveBackward);
     direction.x = Number(moveRight) - Number(moveLeft);
