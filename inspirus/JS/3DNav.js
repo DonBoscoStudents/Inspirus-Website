@@ -138,7 +138,7 @@ function init() {
 
 
   var Loader = new GLTFLoader(loadingManager);
-  Loader.load("/Public/Models/untitled.glb", function (gltf) {
+  Loader.load("/Public/Models/4.glb", function (gltf) {
     scene.add(gltf.scene);
 	gltf.scene.scale.set(12,12,12)
 	for(const object in gltf.scene.children){
