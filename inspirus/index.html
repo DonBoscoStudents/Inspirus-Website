@@ -8,7 +8,12 @@
   <script defer src="./JS/NavBar.js"></script>
   <script defer src="./JS/Footer.js"></script>
   <script defer src="./JS/HREF.js"></script>
+
+  <script type="module" crossorigin src="/JS/3DMoonBuild.js"></script>
+  <!-- <script type="module" src="./JS/3DHero.js"></script> -->
+
   <script defer src="./JS/RandomizeImages.js"></script>
+
   <link rel="stylesheet" href="./output.css">
 
 </head>
@@ -16,8 +21,8 @@
 <body class="dark bg-primary text-textColor">
 
   <section id="hero" class="lg:p-8 p-4 h-screen">
-    <h1 class="font-IBMPlexSerif text-6xl font-black">Inspirus 7</h1>
-    <p class="lg:w-[min(70%,40rem)] font-NotoSans font-thin mt-3">Prepare to delve into the realms of coding,
+    <h1 class="font-IBMPlexSerif text-6xl font-black z-[100] relative">Inspirus 7</h1>
+    <p class="lg:w-[min(70%,40rem)] font-NotoSans font-thin mt-3 z-[100] relative">Prepare to delve into the realms of coding,
       collaboration, and ingenuity as we embark on a journey to shape the future through technology. Proudly presented
       by the Council of Computer Department Students (C-CODES) in partnership with the Department of Computer
       Engineering, the 7th edition of INSPIRUS is scheduled to take place on October 6th and 7th, 2023. INSPIRUS stands
@@ -25,6 +30,8 @@
       participation from schools, higher secondary institutions, and colleges across Goa. They all come together to
       compete, innovate, and create in pursuit of fantastic prizes.
     </p>
+    <div id="Scene" class="w-[100vw]  h-[200vh] absolute top-0 right-0 "></div>
+    <!-- <canvas id="Scene" class="w-screen h-[200vh] absolute top-0 right-0 "></canvas> -->
   </section>
   <section id="RollingText" class="mt-12">
     <h1 id="IMAGESCROLL" class='flex gap-1 h-[70vh]'>
@@ -65,7 +72,7 @@
   </section>
 
   <section id="Events" class="p-8 mt-10">
-    <h1 class="font-IBMPlexSerif font-bold text-5xl mb-8 text-center">Events</h1>
+    <h1 class="font-IBMPlexSerif font-bold text-5xl mb-8 text-center z-10 relative">Events</h1>
     <div class="flex flex-wrap gap-4 md justify-center">
 
       <div class="cardOutline" onclick="href('/Pages/Event/Inspirathon/')">

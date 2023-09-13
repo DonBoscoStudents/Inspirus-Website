@@ -321,6 +321,12 @@ opacity: 0;
   padding: 6px;
 }
 
+#Scene{
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+}
+
+
 /* team_page */
 /* /////////////////////////////////////////////////////////////////////// */
 .team{
@@ -430,3 +436,4 @@ opacity: 0;
   font-weight: 800;
   font-size: 18px;
 } */
+
