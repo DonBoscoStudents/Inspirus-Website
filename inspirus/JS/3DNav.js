@@ -1,191 +1,46 @@
-import * as THREE from "three";
-
-import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-
-let camera, scene, renderer, controls;
-
-const objects = [];
-
-let raycaster;
-
-let moveForward = false;
-let moveBackward = false;
-let moveLeft = false;
-let moveRight = false;
-let canJump = false;
-
-const loadingManager = new THREE.LoadingManager();
-
-let prevTime = performance.now();
-const velocity = new THREE.Vector3();
-const direction = new THREE.Vector3();
-const vertex = new THREE.Vector3();
-const color = new THREE.Color();
-
-init();
-animate();
-
-function init() {
-  camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    1,
-    1000
-  );
-
-  const armGeo =new THREE.BoxGeometry(1.2,1.2,7)
-  const armMaterial=new THREE.MeshPhysicalMaterial({roughness:0.2,metalness:1})
-  const arm = new THREE.Mesh(armGeo,armMaterial)
-
-  arm.position.set(2,-3.2,-2)
-  arm.rotation.set(1,3.5,0)
-  camera.add(arm)
-    console.log(arm)
-  camera.position.y = 10;
-
-  scene = new THREE.Scene();
-  const texture = new THREE.TextureLoader(loadingManager).load(
-	"/Public/Texture/hilly_terrain_01_puresky_4k.jpg",
-	() => {
-	  texture.mapping = THREE.EquirectangularReflectionMapping;
-	  texture.colorSpace = THREE.SRGBColorSpace;
-	  scene.background = texture;
-    armMaterial.envMap=texture;
-	}
-  );
-
- const armTexture =new THREE.TextureLoader(loadingManager).load(
-	"/Public/Texture/Arm.png",
-	() => {
-
-	  texture.colorSpace = THREE.SRGBColorSpace;
-
-    armMaterial.map=armTexture;
-	}
-  );
-
- const armNoiseTexture =new THREE.TextureLoader(loadingManager).load(
-	"/Public/Texture/Noise.jpg",
-	() => {
-
-	  texture.colorSpace = THREE.SRGBColorSpace;
-
-    armMaterial.roughnessMap=armNoiseTexture;
-	}
-  );
-  scene.fog = new THREE.Fog(0xffffff, 0, 750);
-
-  const light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 2.5);
-  light.position.set(0.5, 1, 0.75);
-  scene.add(light);
-
-  controls = new PointerLockControls(camera, document.body);
-
-  const SceneDOM = document.getElementById("Scene");
-
-  SceneDOM.addEventListener("click", function () {
-    controls.lock();
-  });
-
-  controls.addEventListener("lock", function () {
-	SceneDOM.classList.add("LockedScene");
-    // SceneDOM.style.display = 'none';
-    // blocker.style.display = 'none';
-  });
-
-  controls.addEventListener("unlock", function () {
-	SceneDOM.classList.remove("LockedScene");
-
-    // blocker.style.display = 'block';
-    // SceneDOM.style.display = '';
-  });
-
-  scene.add(controls.getObject());
-
-  const onKeyDown = function (event) {
-    switch (event.code) {
-      case "ArrowUp":
-      case "KeyW":
-        moveForward = true;
-        break;
-
-      case "ArrowLeft":
-      case "KeyA":
-        moveLeft = true;
-        break;
-
-      case "ArrowDown":
-      case "KeyS":
-        moveBackward = true;
-        break;
-
-      case "ArrowRight":
-      case "KeyD":
-        moveRight = true;
-        break;
-
-      case "Space":
-        if (canJump === true) velocity.y += 350;
-        canJump = false;
-        break;
-    }
-  };
-
-  const onKeyUp = function (event) {
-    switch (event.code) {
-      case "ArrowUp":
-      case "KeyW":
-        moveForward = false;
-        break;
-
-      case "ArrowLeft":
-      case "KeyA":
-        moveLeft = false;
-        break;
-
-      case "ArrowDown":
-      case "KeyS":
-        moveBackward = false;
-        break;
-
-      case "ArrowRight":
-      case "KeyD":
-        moveRight = false;
-        break;
-    }
-  };
-
-  document.addEventListener("keydown", onKeyDown);
-  document.addEventListener("keyup", onKeyUp);
-
-  raycaster = new THREE.Raycaster(
-    new THREE.Vector3(),
-    new THREE.Vector3(0, -1, 0),
-    0,
-    10
-  );
+import * as THREE from 'three';
 
 
-  var Loader = new GLTFLoader(loadingManager);
-  Loader.load("/Public/Models/Floor2V1_cLEAN.gltf", function (gltf) {
-    scene.add(gltf.scene);
-	gltf.scene.scale.set(12,12,12)
-	for(const object in gltf.scene.children[0].children){
-    const Mesh=gltf.scene.children[0].children[object]
+			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-		objects.push(Mesh)
+			import { Octree } from 'three/addons/math/Octree.js';
+			import { OctreeHelper } from 'three/addons/helpers/OctreeHelper.js';
 
-	}
-	// objects.push(gltf.scene.children)
-	
-    // College = gltf.scene;
-  });
+			import { Capsule } from 'three/addons/math/Capsule.js';
 
-  //
+			import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
-  
-const progressBar = document.getElementById("progressBar");
+			const clock = new THREE.Clock();
+      const loadingManager = new THREE.LoadingManager();
+			const scene = new THREE.Scene();
+			// scene.background = new THREE.Color( 0x88ccee );
+			// scene.fog = new THREE.Fog( 0x88ccee, 0, 50 );
+
+			const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			camera.rotation.order = 'YXZ';
+
+			const fillLight1 = new THREE.HemisphereLight( 0x8dc1de, 0xffffff, 1.5 );
+			fillLight1.position.set( 2, 1, 1 );
+			scene.add( fillLight1 );
+
+
+
+			const directionalLight = new THREE.DirectionalLight( 0xffffff, 2.5 );
+			directionalLight.position.set( - 5, 25, - 1 );
+			directionalLight.castShadow = true;
+			directionalLight.shadow.camera.near = 0.01;
+			directionalLight.shadow.camera.far = 500;
+			directionalLight.shadow.camera.right = 30;
+			directionalLight.shadow.camera.left = - 30;
+			directionalLight.shadow.camera.top	= 30;
+			directionalLight.shadow.camera.bottom = - 30;
+			directionalLight.shadow.mapSize.width = 1024;
+			directionalLight.shadow.mapSize.height = 1024;
+			directionalLight.shadow.radius = 4;
+			directionalLight.shadow.bias = - 0.00006;
+			scene.add( directionalLight );
+
+      const progressBar = document.getElementById("progressBar");
 const ItemLoadingText = document.getElementById("ItemLoading");
 
 
@@ -199,66 +54,309 @@ const ItemLoadingText = document.getElementById("ItemLoading");
 	}
   };
 
-  renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById("Scene").appendChild(renderer.domElement);
-  window.addEventListener("resize", onWindowResize);
-}
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+			const container = document.getElementById( 'Scene' );
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
+			const renderer = new THREE.WebGLRenderer( { antialias: true } );
+			renderer.setPixelRatio( window.devicePixelRatio );
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.VSMShadowMap;
+			renderer.toneMapping = THREE.ACESFilmicToneMapping;
+			container.appendChild( renderer.domElement );
 
-function animate() {
-  requestAnimationFrame(animate);
 
-  const time = performance.now();
+			const GRAVITY = 30;
 
-  if (controls.isLocked === true) {
-    raycaster.ray.origin.copy(controls.getObject().position);
-    raycaster.ray.origin.y -= 10;
+			const NUM_SPHERES = 100;
+			const SPHERE_RADIUS = 0.2;
 
-    const intersections = raycaster.intersectObjects(objects, false);
-    // console.log(intersections)
-    const onObject = intersections.length > 0;
+			const STEPS_PER_FRAME = 5;
 
-    const delta = (time - prevTime) / 1000;
-	const speed=3
-    velocity.x -= velocity.x * speed * delta;
-    velocity.z -= velocity.z * speed * delta;
+			const sphereGeometry = new THREE.IcosahedronGeometry( SPHERE_RADIUS, 5 );
+			const sphereMaterial = new THREE.MeshLambertMaterial( { color: 0xdede8d } );
 
-    velocity.y -= 9.8 * 200.0 * delta; // 100.0 = mass
+			const spheres = [];
+			let sphereIdx = 0;
 
-    direction.z = Number(moveForward) - Number(moveBackward);
-    direction.x = Number(moveRight) - Number(moveLeft);
-    direction.normalize(); // this ensures consistent movements in all directions
+			for ( let i = 0; i < NUM_SPHERES; i ++ ) {
 
-    if (moveForward || moveBackward) velocity.z -= direction.z * 400.0 * delta;
-    if (moveLeft || moveRight) velocity.x -= direction.x * 400.0 * delta;
+				const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+				sphere.castShadow = true;
+				sphere.receiveShadow = true;
 
-    if (onObject === true) {
-      velocity.y = Math.max(0, velocity.y);
-      canJump = true;
-    }
+				scene.add( sphere );
 
-    controls.moveRight(-velocity.x * delta);
-    controls.moveForward(-velocity.z * delta);
+				spheres.push( {
+					mesh: sphere,
+					collider: new THREE.Sphere( new THREE.Vector3( 0, - 100, 0 ), SPHERE_RADIUS ),
+					velocity: new THREE.Vector3()
+				} );
 
-    controls.getObject().position.y += velocity.y * delta; // new behavior
+			}
 
-    if (controls.getObject().position.y < 10) {
-      velocity.y = 0;
-      controls.getObject().position.y = 10;
+			const worldOctree = new Octree();
 
-      canJump = true;
-    }
-  }
+			const playerCollider = new Capsule( new THREE.Vector3( 0, 0.35, 0 ), new THREE.Vector3( 0, 1, 0 ), 0.35 );
 
-  prevTime = time;
+			const playerVelocity = new THREE.Vector3();
+			const playerDirection = new THREE.Vector3();
 
-  renderer.render(scene, camera);
-}
+			let playerOnFloor = false;
+			let mouseTime = 0;
+
+			const keyStates = {};
+
+			const vector1 = new THREE.Vector3();
+			const vector2 = new THREE.Vector3();
+			const vector3 = new THREE.Vector3();
+
+			document.addEventListener( 'keydown', ( event ) => {
+
+				keyStates[ event.code ] = true;
+
+			} );
+
+			document.addEventListener( 'keyup', ( event ) => {
+
+				keyStates[ event.code ] = false;
+
+			} );
+
+			container.addEventListener( 'mousedown', () => {
+
+				document.body.requestPointerLock();
+
+				mouseTime = performance.now();
+
+			} );
+
+		
+
+			document.body.addEventListener( 'mousemove', ( event ) => {
+
+				if ( document.pointerLockElement === document.body ) {
+
+					camera.rotation.y -= event.movementX / 500;
+					camera.rotation.x -= event.movementY / 500;
+
+				}
+
+			} );
+
+			window.addEventListener( 'resize', onWindowResize );
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+		
+
+			function playerCollisions() {
+
+				const result = worldOctree.capsuleIntersect( playerCollider );
+
+				playerOnFloor = false;
+
+				if ( result ) {
+
+					playerOnFloor = result.normal.y > 0;
+
+					if ( ! playerOnFloor ) {
+
+						playerVelocity.addScaledVector( result.normal, - result.normal.dot( playerVelocity ) );
+
+					}
+
+					playerCollider.translate( result.normal.multiplyScalar( result.depth ) );
+
+				}
+
+			}
+
+			function updatePlayer( deltaTime ) {
+
+				let damping = Math.exp( - 4 * deltaTime ) - 1;
+
+				if ( ! playerOnFloor ) {
+
+					playerVelocity.y -= GRAVITY * deltaTime;
+
+					// small air resistance
+					damping *= 0.1;
+
+				}
+
+				playerVelocity.addScaledVector( playerVelocity, damping );
+
+				const deltaPosition = playerVelocity.clone().multiplyScalar( deltaTime );
+				playerCollider.translate( deltaPosition );
+
+				playerCollisions();
+
+				camera.position.copy( playerCollider.end );
+
+			}
+
+		
+
+
+			function getForwardVector() {
+
+				camera.getWorldDirection( playerDirection );
+				playerDirection.y = 0;
+				playerDirection.normalize();
+
+				return playerDirection;
+
+			}
+
+			function getSideVector() {
+
+				camera.getWorldDirection( playerDirection );
+				playerDirection.y = 0;
+				playerDirection.normalize();
+				playerDirection.cross( camera.up );
+
+				return playerDirection;
+
+			}
+
+			function controls( deltaTime ) {
+
+				// gives a bit of air control
+				const speedDelta = deltaTime * ( playerOnFloor ? 25 : 8 );
+
+				if ( keyStates[ 'KeyW' ] ) {
+
+					playerVelocity.add( getForwardVector().multiplyScalar( speedDelta ) );
+
+				}
+
+				if ( keyStates[ 'KeyS' ] ) {
+
+					playerVelocity.add( getForwardVector().multiplyScalar( - speedDelta ) );
+
+				}
+
+				if ( keyStates[ 'KeyA' ] ) {
+
+					playerVelocity.add( getSideVector().multiplyScalar( - speedDelta ) );
+
+				}
+
+				if ( keyStates[ 'KeyD' ] ) {
+
+					playerVelocity.add( getSideVector().multiplyScalar( speedDelta ) );
+
+				}
+
+				if ( playerOnFloor ) {
+
+					if ( keyStates[ 'Space' ] ) {
+
+						playerVelocity.y = 8;
+
+					}
+
+				}
+
+			}
+
+			const loader = new GLTFLoader(loadingManager).setPath( '/Public/Models/' );
+
+			loader.load( 'Floor2V1_cLEAN.gltf', ( gltf ) => {
+
+				scene.add( gltf.scene );
+
+				worldOctree.fromGraphNode( gltf.scene );
+
+
+				gltf.scene.traverse( child => {
+
+					if ( child.isMesh ) {
+
+						child.castShadow = true;
+						child.receiveShadow = true;
+
+						if ( child.material.map ) {
+
+							// child.material.map.anisotropy = 4;
+      const texture = new THREE.TextureLoader(loadingManager).load(
+          "/Public/Texture/hilly_terrain_01_puresky_4k.jpg",
+          () => {
+            texture.mapping = THREE.EquirectangularReflectionMapping;
+            texture.colorSpace = THREE.SRGBColorSpace;
+            scene.background = texture;
+            child.material.envMap=texture
+          }
+          );
+
+						}
+
+
+					}
+
+				} );
+
+  
+
+
+				const helper = new OctreeHelper( worldOctree );
+				helper.visible = false;
+				scene.add( helper );
+
+			
+
+				animate();
+
+			} );
+
+      
+     
+
+			function teleportPlayerIfOob() {
+
+				if ( camera.position.y <= - 25 ) {
+
+					playerCollider.start.set( 0, 0.35, 0 );
+					playerCollider.end.set( 0, 1, 0 );
+					playerCollider.radius = 0.35;
+					camera.position.copy( playerCollider.end );
+					camera.rotation.set( 0, 0, 0 );
+
+				}
+
+			}
+
+
+			function animate() {
+
+				const deltaTime = Math.min( 0.05, clock.getDelta() ) / STEPS_PER_FRAME;
+
+				// we look for collisions in substeps to mitigate the risk of
+				// an object traversing another too quickly for detection.
+
+				for ( let i = 0; i < STEPS_PER_FRAME; i ++ ) {
+
+					controls( deltaTime );
+
+					updatePlayer( deltaTime );
+
+
+					teleportPlayerIfOob();
+
+				}
+
+				renderer.render( scene, camera );
+
+
+
+				requestAnimationFrame( animate );
+
+			}
