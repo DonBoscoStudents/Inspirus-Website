@@ -27,7 +27,9 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
+
 camera.rotation.order = "YXZ";
+camera.rotation.set(0,Math.PI,0);
 
 const fillLight1 = new THREE.HemisphereLight(0x8dc1de, 0xffffff, 1.5);
 fillLight1.position.set(2, 1, 1);
@@ -42,9 +44,9 @@ directionalLight.shadow.camera.right = 30;
 directionalLight.shadow.camera.left = -30;
 directionalLight.shadow.camera.top = 30;
 directionalLight.shadow.camera.bottom = -30;
-directionalLight.shadow.mapSize.width = 1024;
-directionalLight.shadow.mapSize.height = 1024;
-directionalLight.shadow.radius = 4;
+directionalLight.shadow.mapSize.width = 4096;
+directionalLight.shadow.mapSize.height = 4096;
+directionalLight.shadow.radius = 5;
 directionalLight.shadow.bias = -0.00006;
 scene.add(directionalLight);
 
@@ -120,6 +122,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.VSMShadowMap;
+// renderer.shadowMapType = THREE.PCFSoftShadowMap; 
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 container.appendChild(renderer.domElement);
 
@@ -132,7 +135,7 @@ const worldOctree = new Octree();
 const playerCollider = new Capsule(
   new THREE.Vector3(0, 0.35, 0),
   new THREE.Vector3(0, 1, 0),
-  0.35
+  .55
 );
 
 const playerVelocity = new THREE.Vector3();
@@ -222,7 +225,9 @@ function updatePlayer(deltaTime) {
 
   playerCollisions();
 
-  camera.position.copy(playerCollider.end);
+
+camera.position.copy(playerCollider.end);
+
 }
 
 function getForwardVector() {
@@ -274,6 +279,7 @@ function controls(deltaTime) {
 
   if((keyStates["KeyW"]||keyStates["KeyA"]||keyStates["KeyS"]||keyStates["KeyD"])&&(playerOnFloor)){
     sound.setVolume(.1)
+    
   }else{
 
       sound.setVolume(0)
@@ -283,6 +289,7 @@ function controls(deltaTime) {
 
 }
 
+const DefaultMaterial= new THREE.MeshPhysicalMaterial({color:0xfafaff})
 
 const loader = new GLTFLoader(loadingManager).setPath("/Public/Models/");
 
@@ -295,7 +302,11 @@ loader.load("Main.gltf", (gltf) => {
     if (child.isMesh) {
       child.castShadow = true;
       child.receiveShadow = true;
-
+      console.log(child)
+      if(child.material.color.r+child.material.color.g+child.material.color.b==3&&child.map==null){
+        child.material=DefaultMaterial
+        
+      }
       if (child.material.map) {
         // child.material.map.anisotropy = 4;
         const texture = new THREE.TextureLoader(loadingManager).load(
@@ -348,7 +359,13 @@ composer.addPass(renderScene);
 composer.addPass(bloomPass);
 // composer.addPass(bloom);
 composer.addPass(outputPass);
+// function updateStats(){
+//   let XVal=camera.position['x'].toPrecision(2)
+//   let YVal=camera.position['y'].toPrecision(2)
+//   let ZVal=camera.position['z'].toPrecision(2)
 
+// document.getElementById("STATS").innerHTML=statsValue
+// }
 function animate() {
   const deltaTime = Math.min(0.05, clock.getDelta()) / STEPS_PER_FRAME;
 
@@ -359,7 +376,7 @@ function animate() {
     controls(deltaTime);
 
     updatePlayer(deltaTime);
-
+    // updateStats();
 
     teleportPlayerIfOob();
   }
