@@ -115,7 +115,7 @@ loadingManager.onProgress = function (item, loaded, total) {
   }
 };
 
-const container = document.getElementById("Scene");
+const container = document.getElementById("GameScene");
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -161,7 +161,7 @@ document.addEventListener("keyup", (event) => {
 container.addEventListener("mousedown", () => {
   document.body.requestPointerLock();
   MiceOnVenus.play();
-  document.getElementById("Scene").classList.add("LockedScene");
+  document.getElementById("GameScene").classList.add("LockedScene");
 
   mouseTime = performance.now();
 });

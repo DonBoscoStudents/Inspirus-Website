@@ -82,7 +82,7 @@ function init() {
 
   controls = new PointerLockControls(camera, document.body);
 
-  const SceneDOM = document.getElementById("Scene");
+  const SceneDOM = document.getElementById("GameScene");
 
   SceneDOM.addEventListener("click", function () {
     controls.lock();
