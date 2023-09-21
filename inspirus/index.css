@@ -185,9 +185,16 @@ body:has(.LockedScene){
 }
 
 #RollingText {
+
   user-select: none;
   overflow: hidden;
-}
+  & img{
+    height: 100%;
+    width: auto;
+/* aspect-ratio: 14/9; */
+object-fit: cover;
+border-radius: 30px;
+}}
 #RollingText h1 {
 
   font-family: Noto Serif;
@@ -195,7 +202,7 @@ body:has(.LockedScene){
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-  animation: 80s T1Ani linear 0s infinite;
+  animation: 200s T1Ani linear 0s infinite;
 }
 #RollingText h2 {
   font-family: Eleganto Sans;
@@ -203,7 +210,7 @@ body:has(.LockedScene){
   font-weight: 100;
   font-size: 100px;
   line-height: 90%;
-  animation: 90s T1Ani linear 0s infinite;
+  animation: 140s linear  infinite T2Ani;
 }
 
 @media (min-width:1000px) {
@@ -213,7 +220,7 @@ body:has(.LockedScene){
     font-style: normal;
     font-weight: 400;
     line-height: 80%;
-    animation: 80s T1Ani linear 0s infinite;
+    animation: 200s T1Ani linear 0s infinite;
   }
   #RollingText h2 {
     font-family: Eleganto Sans;
@@ -231,7 +238,7 @@ body:has(.LockedScene){
     translate: 0ch 0;
   }
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 @keyframes T2Ani {
@@ -239,7 +246,7 @@ body:has(.LockedScene){
     translate: 0ch 0;
   }
   100% {
-    translate: -20ch 0;
+    translate: -1000% 0;
   }
 }
 
@@ -319,6 +326,12 @@ opacity: 0;
   border: 1px solid;
   padding: 6px;
 }
+
+#Scene{
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+}
+
 
 /* team_page */
 /* /////////////////////////////////////////////////////////////////////// */
@@ -438,3 +451,4 @@ border-radius: 0;
   font-weight: 800;
   font-size: 18px;
 } */
+
