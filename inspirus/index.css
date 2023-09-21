@@ -397,6 +397,13 @@ border-radius: 0;
  height: 100vh;
 
 }
+
+#LINKS a{
+transition: .2s;
+&:hover{
+  color: #08984e;
+}
+}
 /* <div class="personCard w-40 bg-primary h-auto overflow-hidden rounded-lg ">
 <img src="/Assets/Members/Rhys.jpg" alt="">
 <div class="p-2">

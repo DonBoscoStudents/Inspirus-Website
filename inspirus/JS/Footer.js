@@ -16,9 +16,9 @@ Footer.innerHTML=`<div class="relative">
 
   </a>
 </div>
-<div class="absolute bottom-2 font-thin">
-  <a href="https://www.instagram.com/inspirusdbce/">Instagram</a>
-  <a href="https://www.facebook.com/inspirusdbce">Facebook</a>
+<div class="absolute bottom-2 font-thin" id="LINKS">
+  <a href="https://www.instagram.com/inspirusdbce/">Instagram</a> |
+  <a href="https://www.facebook.com/inspirusdbce">Facebook</a> |
   <a href="https://twitter.com/inspirus_dbce">Twitter</a>
 
 </div>
