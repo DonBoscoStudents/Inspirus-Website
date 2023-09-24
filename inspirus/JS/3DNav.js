@@ -7,7 +7,7 @@ import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { BloomPass } from "three/addons/postprocessing/BloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { Octree } from "three/addons/math/Octree.js";
 import { OctreeHelper } from "three/addons/helpers/OctreeHelper.js";
 
@@ -292,7 +292,11 @@ function controls(deltaTime) {
 const DefaultMaterial= new THREE.MeshPhysicalMaterial({color:0xfafaff})
 
 const loader = new GLTFLoader(loadingManager).setPath("/Public/Models/");
+const Dloader = new DRACOLoader();
+Dloader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/')
+Dloader.setDecoderConfig({type:'js'})
 
+loader.setDRACOLoader(Dloader)
 loader.load("Main.gltf", (gltf) => {
   scene.add(gltf.scene);
 
@@ -302,11 +306,10 @@ loader.load("Main.gltf", (gltf) => {
     if (child.isMesh) {
       child.castShadow = true;
       child.receiveShadow = true;
-      console.log(child)
-      if(child.material.color.r+child.material.color.g+child.material.color.b==3&&child.map==null){
-        child.material=DefaultMaterial
+      // if(child.material.color.r+child.material.color.g+child.material.color.b==3&&child.map==null){
+      //   // child.material=DefaultMaterial
         
-      }
+      // }
       if (child.material.map) {
         // child.material.map.anisotropy = 4;
         const texture = new THREE.TextureLoader(loadingManager).load(
