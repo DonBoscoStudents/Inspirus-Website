@@ -397,6 +397,22 @@ border-radius: 0;
  height: 100vh;
 
 }
+@media (min-width:800px) {
+    .sponsors{
+  width: 42vw;
+    }
+}
+.sponsors{
+
+
+  padding-bottom: 10px;
+  & a img{
+    object-fit: scale-down;
+    max-height: 30vw;
+    width: 40vw;
+/* background: white; */
+  }
+}
 #LINKS{
   display: flex;
   gap: 6px;

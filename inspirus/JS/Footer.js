@@ -3,17 +3,9 @@ const Footer= document.createElement('div')
 
 Footer.innerHTML=`<div class="relative">
 <h1 class="font-black font-rubik text-3xl mb-2">Our Sponsors</h1>
-<div class="grid grid-cols-2 gap-2  pr-2">
-  <a href="https://oneshield.com/"><img class="h-full p-3 aspect-auto"
-      src="/Assets/Sponsors/OneShield2.svg" alt=""></a>
-
-  <a href="https://www.tersusenergy.io/">
-    <img class="h-full p-3" style='filter:drop-shadow(2px 1px 2px #04040488);' src="/Assets/Sponsors/Tersus.svg" alt="">
-
-  </a>
-  <a href="https://conexaotechsolutions.com/">
-    <img class="h-full p-3"  src="/Assets/Sponsors/Conexao.jpg" alt="">
-
+<div class="sponsors">
+  <a id="SponsorLink" href="https://oneshield.com/"><img class="h-full p-3 aspect-auto"
+      src="/Assets/Sponsors/OneShield2.svg" id="SponsorImage" alt="">
   </a>
 </div>
 <div class="absolute bottom-2 font-thin" id="LINKS">
@@ -44,3 +36,56 @@ Footer.classList.add('footer')
 document.body.appendChild(Footer)
 
 
+
+
+const SponsorImage=document.getElementById('SponsorImage')
+const SponsorLink=document.getElementById('SponsorLink')
+
+
+// a id="SponsorLink" href="https://oneshield.com/"><img class="h-full p-3 aspect-auto"
+//       src="/Assets/Sponsors/OneShield2.svg" id="SponsorImage" alt=""></img>
+
+
+
+// {/* <a href="https://www.tersusenergy.io/">
+// <img class="h-full p-3" style='filter:drop-shadow(2px 1px 2px #04040488);' src="/Assets/Sponsors/Tersus.svg" alt="">
+
+// </a>
+// <a href="https://conexaotechsolutions.com/">
+// <img class="h-full p-3"  src="/Assets/Sponsors/Conexao.jpg" alt="">
+
+// </a> */}
+
+const SponsorsList=[
+  {
+    "Image":"/Assets/Sponsors/OneShield2.svg",
+    "Link":"https://oneshield.com/",
+  },
+  {
+    "Image":"/Assets/Sponsors/Tersus.svg",
+    "Link":"https://www.tersusenergy.io/",
+  },
+  {
+    "Image":"/Assets/Sponsors/Conexao.jpg",
+    "Link":"https://conexaotechsolutions.com/",
+  },
+  {
+    "Image":"/Assets/Sponsors/evoluteiQ.jpg",
+    "Link":"https://evoluteiq.com/",
+  },
+  {
+    "Image":"/Assets/Sponsors/ONGC.png",
+    "Link":"https://ongcindia.com/",
+  },
+  {
+    "Image":"/Assets/Sponsors/Sapscon.jpg",
+    "Link":"https://www.sapscon.in/",
+  },
+]
+let counter=0
+setInterval(()=>{
+  SponsorImage.src=SponsorsList[counter%SponsorsList.length]['Image']
+  SponsorLink.href=SponsorsList[counter%SponsorsList.length]['Link']
+  console.log(counter)
+  counter++
+},3000)
