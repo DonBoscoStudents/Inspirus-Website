@@ -397,8 +397,13 @@ border-radius: 0;
  height: 100vh;
 
 }
-
+#LINKS{
+  display: flex;
+  gap: 6px;
+}
 #LINKS a{
+  display: flex;
+  gap: 2px;
 transition: .2s;
 &:hover{
   color: #08984e;

@@ -62,45 +62,47 @@ audioLoader.load( '/public/audio/Minecraft Footsteps .mp3', function( buffer ) {
 	sound.play();
 });
 
-
-const MiceOnVenus = new THREE.Audio( listener );
+const MiceOnVenus = new THREE.Audio(listener);
 const MiceOnVenusLoader = new THREE.AudioLoader(loadingManager);
-MiceOnVenusLoader.load( '/public/audio/Mice On Venus  YouTube.mp3', function( buffer ) {
-    MiceOnVenus.setBuffer( buffer );
-    MiceOnVenus.setVolume( .1 );
 
-  });
-  
-  
-  const C418FarMinecraft = new THREE.Audio( listener );
-  const C418FarMinecraftLoader = new THREE.AudioLoader(loadingManager);
-  C418FarMinecraftLoader.load( '/public/audio/C418  Far Minecraft Volume Beta  YouTube.mp3', function( buffer ) {
-    C418FarMinecraft.setBuffer( buffer );
-    C418FarMinecraft.setVolume( .1 );
-  });
+MiceOnVenusLoader.load('/public/audio/Mice On Venus  YouTube.mp3', function (buffer) {
+    MiceOnVenus.setBuffer(buffer);
+    MiceOnVenus.setVolume(0.1);
 
+    // Start playing "Mice On Venus" when it's loaded
+    MiceOnVenus.play();
+});
 
-  const PigStep = new THREE.Audio( listener );
-  const PigStepLoader = new THREE.AudioLoader(loadingManager);
-  PigStepLoader.load( '/public/audio/Pigstep Stereo Mix  YouTube.mp3', function( buffer ) {
-    PigStep.setBuffer( buffer );
-    PigStep.setVolume( .1 );
-  });
+const C418FarMinecraft = new THREE.Audio(listener);
+const C418FarMinecraftLoader = new THREE.AudioLoader(loadingManager);
 
+C418FarMinecraftLoader.load('/public/audio/C418  Far Minecraft Volume Beta  YouTube.mp3', function (buffer) {
+    C418FarMinecraft.setBuffer(buffer);
+    C418FarMinecraft.setVolume(0.1);
+});
 
-  MiceOnVenus.onEnded=()=>{
-    MiceOnVenus.stop()
-    C418FarMinecraft.play()
-  };
-  C418FarMinecraft.onEnded=()=>{
-    C418FarMinecraft.stop()
-    PigStep.play()
-  };
-  PigStep.onEnded=()=>{ 
-    PigStep.stop()
-    MiceOnVenus.play()
-  }
+const PigStep = new THREE.Audio(listener);
+const PigStepLoader = new THREE.AudioLoader(loadingManager);
 
+PigStepLoader.load('/public/audio/Pigstep Stereo Mix  YouTube.mp3', function (buffer) {
+    PigStep.setBuffer(buffer);
+    PigStep.setVolume(0.1);
+});
+
+MiceOnVenus.onEnded = () => {
+    // You can add a smooth transition or fade-out effect here if needed
+    C418FarMinecraft.play();
+};
+
+C418FarMinecraft.onEnded = () => {
+    // You can add a smooth transition or fade-out effect here if needed
+    PigStep.play();
+};
+
+PigStep.onEnded = () => {
+    // You can add a smooth transition or fade-out effect here if needed
+    MiceOnVenus.play();
+};
 
 const progressBar = document.getElementById("progressBar");
 const ItemLoadingText = document.getElementById("ItemLoading");
