@@ -335,6 +335,8 @@ loader.load("Main.gltf", (gltf) => {
   animate();
 });
 
+
+
 function teleportPlayerIfOob() {
   if (camera.position.y <= -25) {
     playerCollider.start.set(0, 0.35, 0);
