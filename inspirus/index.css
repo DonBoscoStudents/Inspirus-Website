@@ -75,6 +75,8 @@
 
 }
 
+
+
 .dark {
   --primary: #01000c;
   --primary-2: hsl(247, 67%, 13%);
@@ -89,6 +91,7 @@
   --c5: #fb1048;
   --c6: #e813b9;
 }
+
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -105,7 +108,7 @@
   left: 0;
   right: 0;
   background: var(--primary-3);
-  background-image: url('/Assets/grain_dark.png');
+  /* background-image: url('/Assets/grain_dark.png'); */
   height: 60px;
   display: flex;
   align-items: center;
@@ -175,8 +178,15 @@
     }
   }
 }
+canvas{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* opacity:; */
+}
 body {
-  background-image: url('./Assets/grain_dark.png');
+  /* background-image: url('./Assets/grain_dark.png'); */
   margin-top: 60px;
 }
 

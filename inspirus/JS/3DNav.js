@@ -293,47 +293,47 @@ function controls(deltaTime) {
 
 const DefaultMaterial= new THREE.MeshPhysicalMaterial({color:0xfafaff})
 
-const loader = new GLTFLoader(loadingManager).setPath("/Public/Models/");
-const Dloader = new DRACOLoader();
-Dloader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/')
-Dloader.setDecoderConfig({type:'js'})
 
-loader.setDRACOLoader(Dloader)
-loader.load("Main.gltf", (gltf) => {
-  scene.add(gltf.scene);
-
-  worldOctree.fromGraphNode(gltf.scene);
-
-  gltf.scene.traverse((child) => {
-    if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
-      // if(child.material.color.r+child.material.color.g+child.material.color.b==3&&child.map==null){
-      //   // child.material=DefaultMaterial
+function LoadModel(ModelURL){
+  const loader = new GLTFLoader(loadingManager).setPath("/Public/Models/");
+  loader.load(ModelURL, (gltf) => {
+    scene.add(gltf.scene);
+  
+    worldOctree.fromGraphNode(gltf.scene);
+  
+    gltf.scene.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+        // if(child.material.color.r+child.material.color.g+child.material.color.b==3&&child.map==null){
+        //   // child.material=DefaultMaterial
+          
+        // }
+        if (child.material.map) {
+          // child.material.map.anisotropy = 4;
+          const texture = new THREE.TextureLoader(loadingManager).load(
+            "/Public/Texture/hilly_terrain_01_puresky_4k.jpg",
+            () => {
+              texture.mapping = THREE.EquirectangularReflectionMapping;
+              texture.colorSpace = THREE.SRGBColorSpace;
+              scene.background = texture;
+              child.material.envMap = texture;
         
-      // }
-      if (child.material.map) {
-        // child.material.map.anisotropy = 4;
-        const texture = new THREE.TextureLoader(loadingManager).load(
-          "/Public/Texture/hilly_terrain_01_puresky_4k.jpg",
-          () => {
-            texture.mapping = THREE.EquirectangularReflectionMapping;
-            texture.colorSpace = THREE.SRGBColorSpace;
-            scene.background = texture;
-            child.material.envMap = texture;
-      
-          }
-        );
+            }
+          );
+        }
       }
-    }
+    });
+  
+    const helper = new OctreeHelper(worldOctree);
+    helper.visible = false;
+    scene.add(helper);
+  
+    animate();
   });
+}
 
-  const helper = new OctreeHelper(worldOctree);
-  helper.visible = false;
-  scene.add(helper);
 
-  animate();
-});
 
 
 
@@ -366,6 +366,10 @@ composer.addPass(renderScene);
 composer.addPass(bloomPass);
 // composer.addPass(bloom);
 composer.addPass(outputPass);
+
+
+LoadModel('main.gltf')
+
 // function updateStats(){
 //   let XVal=camera.position['x'].toPrecision(2)
 //   let YVal=camera.position['y'].toPrecision(2)
@@ -373,6 +377,9 @@ composer.addPass(outputPass);
 
 // document.getElementById("STATS").innerHTML=statsValue
 // }
+
+  
+
 function animate() {
   const deltaTime = Math.min(0.05, clock.getDelta()) / STEPS_PER_FRAME;
 

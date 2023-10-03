@@ -534,6 +534,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -1180,6 +1214,12 @@ video {
   mix-blend-mode: screen;
 }
 
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1340,7 +1380,7 @@ video {
   left: 0;
   right: 0;
   background: var(--primary-3);
-  background-image: url('/Assets/grain_dark.png');
+  /* background-image: url('/Assets/grain_dark.png'); */
   height: 60px;
   display: flex;
   align-items: center;
@@ -1407,8 +1447,16 @@ video {
   }
 }
 
+canvas{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* opacity:; */
+}
+
 body {
-  background-image: url('./Assets/grain_dark.png');
+  /* background-image: url('./Assets/grain_dark.png'); */
   margin-top: 60px;
 }
 
